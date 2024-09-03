@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>移视科技-登录页面-</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <!--    <link rel="stylesheet" href="css/common.css"/>-->
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <style>
+        .login-body {
+            width: 100%;
+            height: 100%;
+            background-image: url("image/loginbg.png");
+
+            background-size: cover;
+            background-position: right center;
+        }
+
+        .login-content {
+            width: 510px;
+            height: 100%;
+            /*background-color: #000;*/
+            margin-left: 140px;
+        }
+
+        .content {
+            position: relative;
+            margin-top: 97px;
+        }
+
+        .content img {
+            width: 100%;
+        }
+
+        .from {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .from .login-div, .from .register-div {
+            padding: 0 45px 57px 45px;
+            background-color: #fff;
+            border-radius: 18px;
+        }
+
+        .register-div {
+            display: none;
+            margin-top: 22px;
+        }
+
+        .type {
+            color: #8E8E8E;
+            font-family: PingFang SC;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            height: 28px;
+            line-height: 28px;
+            padding: 25px 45px 0 45px;
+
+        }
+
+        .type span {
+            width: 52px;
+            margin-right: 50px;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .type .active {
+            color: #333;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            text-align: center;
+
+            position: relative;
+            /*border-radius: 40px;*/
+        }
+
+        .type .active::before {
+            content: '';
+            width: 28px;
+            height: 3px;
+            position: absolute;
+            bottom: -5px;
+            left: 12px;
+            background-color: #3A5BA6;
+            border-radius: 20px;
+
+        }
+
+        .title {
+            color: #3B4552;
+            font-family: Alibaba PuHuiTi;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: capitalize;
+            margin-top: 27px;
+            padding-bottom: 17px;
+        }
+
+        .input-label {
+            color: rgba(119, 119, 119, 0.47);
+            font-family: PingFang TC;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: capitalize;
+            display: flex;
+            margin-top: 15px;
+
+        }
+
+        .input-label span {
+            flex: auto;
+        }
+
+        .input-label .input-label-tip {
+            text-align: right;
+        }
+
+
+        .input-content {
+            height: 48px;
+            border-radius: 4px;
+            background: #E8EEFF;
+            display: flex;
+            align-items: center;
+            padding: 0 18px;
+            margin-top: 5px;
+        }
+
+        .input-content input {
+            flex: auto;
+            background-color: transparent;
+            border: 0;
+            height: 48px;
+        }
+
+        .input-content span {
+            flex: none;
+            line-height: 48px;
+        }
+
+        .input-content .shu {
+            width: 1px;
+            height: 14px;
+            background-color: #C3D0F5;
+            margin: 0 16px;
+        }
+
+        .input-content .icon {
+            width: 26px;
+            height: 26px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .input-content .txt {
+            color: #2F54AE;
+            font-family: PingFang TC;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+        .register-tip {
+            color: #777;
+            font-family: PingFang TC;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: capitalize;
+            margin-top: 15px;
+        }
+
+        .register-tip span {
+            color: #2F54AE;
+            cursor: pointer;
+        }
+
+        .login-btn {
+            height: 48px;
+            border-radius: 4px;
+            background: linear-gradient(271deg, #2F54AE 4.4%, #426ACB 100%);
+            color: #FFF;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 48px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 35px;
+        }
+
+        .logo {
+            padding-top: 52px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="login-body">
+    <div class="login-content">
+        <p class="logo">
+            <img src="image/logo-d.svg"/>
+        </p>
+        <div class="content">
+            <img src="image/login.svg"/>
+            <div class="from">
+
+                <p class="type">
+                    <span data-toggle="0">注册</span>
+                    <span data-toggle="1" class="active">登录</span>
+                </p>
+
+                <div class="login-div">
+                    <p class="title">
+                        login
+                    </p>
+
+                    <p class="input-label">
+                        <span class="input-label-name">
+                            手机号
+                        </span>
+                        <span class="input-label-tip">
+<!--                            错误-->
+                        </span>
+                    </p>
+                    <p class="input-content">
+                        <span class="icon">
+                            <img src="image/phone.svg"/>
+                        </span>
+                        <span class="shu"></span>
+                        <input/>
+                        <!--                        <span class="shu"></span>-->
+                        <span class="txt">
+<!--                            获取验证码-->
+                        </span>
+                    </p>
+
+                    <p class="input-label">
+                        <span class="input-label-name">
+                            密码
+                        </span>
+                        <span class="input-label-tip">
+<!--                            错误-->
+                        </span>
+                    </p>
+
+                    <p class="input-content">
+                        <span class="icon">
+                            <img src="image/mima.svg"/>
+                        </span>
+                        <span class="shu"></span>
+                        <input/>
+                        <span class="shu"></span>
+                        <span class="txt">获取验证码</span>
+                    </p>
+
+
+                    <p class="register-tip">还没有账号？<span>马上注册</span>>></p>
+                    <p class="login-btn">登录</p>
+                </div>
+
+
+                <div class="register-div">
+                    <p class="input-label">
+                        <span class="input-label-name">
+                            手机号
+                        </span>
+                        <span class="input-label-tip">
+<!--                            错误-->
+                        </span>
+                    </p>
+                    <p class="input-content">
+                        <span class="icon">
+                            <img src="image/phone.svg"/>
+                        </span>
+                        <span class="shu"></span>
+                        <input/>
+                        <!--                        <span class="shu"></span>-->
+                        <span class="txt">
+<!--                            获取验证码-->
+                        </span>
+                    </p>
+
+                    <p class="input-label">
+                        <span class="input-label-name">
+                            密码
+                        </span>
+                        <span class="input-label-tip">
+<!--                            错误-->
+                        </span>
+                    </p>
+
+                    <p class="input-content">
+                        <span class="icon">
+                            <img src="image/yzm.svg"/>
+                        </span>
+                        <span class="shu"></span>
+                        <input/>
+                        <span class="shu"></span>
+                        <span class="txt">获取验证码</span>
+                    </p>
+
+                    <p class="input-label">
+                        <span class="input-label-name">
+                            密码
+                        </span>
+                        <span class="input-label-tip">
+<!--                            错误-->
+                        </span>
+                    </p>
+
+                    <p class="input-content">
+                        <span class="icon">
+                            <img src="image/mima.svg"/>
+                        </span>
+                        <span class="shu"></span>
+                        <input/>
+                        <span class="shu"></span>
+                        <span class="txt">获取验证码</span>
+                    </p>
+
+                    <p class="input-label">
+                        <span class="input-label-name">
+                            密码
+                        </span>
+                        <span class="input-label-tip">
+<!--                            错误-->
+                        </span>
+                    </p>
+
+                    <p class="input-content">
+                        <span class="icon">
+                            <img src="image/mima.svg"/>
+                        </span>
+                        <span class="shu"></span>
+                        <input/>
+                        <span class="shu"></span>
+                        <span class="txt">获取验证码</span>
+                    </p>
+
+                    <p class="login-btn">登录</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<div style="text-align:center;">
+    <script type="text/javascript">
+        function login() {
+            var username = $('#username').val().trim()
+            var password = $('#password').val().trim()
+            var verif = true
+            if (username === "") {
+                verif = false
+                $("#username-war").show()
+            } else {
+                $("#username-war").hide()
+
+            }
+            if (password === "") {
+                verif = false
+                $("#password-war").show()
+            } else {
+                $("#password-war").hide()
+
+            }
+
+            if (verif) {
+                location.href = "index.html"
+                localStorage.setItem('username', username)
+            }
+        }
+
+        $(function () {
+            $('.type span').click(function () {
+                $('.active').removeClass('active')
+                $(this).addClass('active')
+
+                const flag = $(this).attr('data-toggle')
+                if (flag === '0') {
+                    $('.login-div').hide()
+                    $('.register-div').show()
+                } else {
+
+                    $('.login-div').show()
+                    $('.register-div').hide()
+                }
+            })
+
+            $('.register-tip span').click(function () {
+
+                $('[data-toggle="0"]').addClass('active')
+                $('[data-toggle="1"]').removeClass('active')
+
+                $('.login-div').hide()
+                $('.register-div').show()
+            })
+        })
+    </script>
+</div>
+</body>
+</html>

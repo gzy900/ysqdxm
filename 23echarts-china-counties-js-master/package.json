@@ -1,0 +1,21 @@
+{
+  "name": "echarts-china-counties-js",
+  "version": "1.0.1",
+  "description": "Packages the maps of Chinese counties for echarts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "C.W.",
+  "license": "MIT",
+  "devDependencies": {
+    "echarts": "^4.0.4",
+    "echarts-china-cities-js": "^0.1.1",
+    "echarts-mapmaker": "^1.0.11",
+    "gulp": "^3.9.1",
+    "gulp-minify": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "pinyin": "^2.8.3",
+    "pug": "^2.0.1",
+    "require-dir": "^1.0.0"
+  }
+}

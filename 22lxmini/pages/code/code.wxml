@@ -1,0 +1,57 @@
+<!--pages/pay/index.wxml-->
+<navigation-bar model:scrollTop="{{ 100 }}"></navigation-bar>
+
+<view class="pay-body">
+  <view class='jiao'>
+    <view class="top">
+      <view class="user-touxiang">
+        <image src="/images/logo.png"></image>
+      </view>
+      <view class="top-tip">
+        请输入您的兑换码
+      </view>
+
+      <view class="code-input">
+        <input model:value='{{discountCode}}' placeholder="输入兑换码"></input>
+      </view>
+
+
+      <view class="play-btn">
+        <text bind:tap="confirmcode">确认</text>
+      </view>
+
+      <view style="color: rgba(147, 166, 226, 1);margin-top: 13px;">
+        <text bind:tap="noConfirmcode">跳过</text>
+      </view>
+
+    </view>
+    <view class="quan-body">
+      <view class="quanBG1 quanBG"></view>
+      <view class="quanBG2 quanBG"></view>
+    </view>
+    <view class="bottom">
+
+      <view class="shuoming">
+
+        <text>使用说明</text>
+      </view>
+      <view style="margin-top: 17px;" class="shuoming1">1、请输入您获取的兑换码，点击确认后可以享受优惠； </view>
+      <view class="shuoming1" style="margin-bottom: 30px;">2、没有兑换码的用户可自行跳过。</view>
+
+    </view>
+  </view>
+</view>
+
+
+<view class="alert" wx:if="{{ alertShow }}">
+  <view class="alert-container">
+    <image src="https://app.maillife.cn/files/photo//2023/03/30/466dd3f3670e49ccbc034465baf65841tc.png" mode="widthFix"></image>
+    <view class="alert-body">
+      <view style="font-size: 18px;">提示</view>
+      <view class="alert-content" style="color:rgba(102, 102, 102, 1);font-size: 14px;margin-top: 10px;">兑换码输入有误，请重新输入！</view>
+      <view class="alert-btn">
+        <button bindtap="alertHide" style="background-color: rgba(241, 255, 252, 1);border: 1px solid rgba(145, 207, 196, 1);">是</button>
+      </view>
+    </view>
+  </view>
+</view>

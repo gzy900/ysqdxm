@@ -1,0 +1,32 @@
+<!--pages/gift/gift.wxml-->
+<view class="gift-body">
+  <view>
+  
+
+    <button>
+      <image bindtap="goinfo" mode="widthFix" src="https://app.maillife.cn/files/photo//2023/03/30/67aaf697b5f84ebf8e533a38303cfc14this.png"></image>
+      <text>为自己购买</text>
+    </button>
+
+    
+    <button bindtap="showShareOrder">
+      <image mode="widthFix" src="https://app.maillife.cn/files/photo//2023/03/30/debd79ffc0ef4068a0243c0ea07c01bcgift.png"></image>
+      <text>为别人购买</text>
+    </button>
+  </view>
+</view>
+
+
+<view class="alert" wx:if="{{ isShareOrder }}">
+  <view class="alert-container">
+    <image src="https://app.maillife.cn/files/photo//2023/03/30/466dd3f3670e49ccbc034465baf65841tc.png" mode="widthFix"></image>
+    <view class="alert-body">
+      <view style="font-size: 18px;">提示</view>
+      <view class="alert-content" style="color:rgba(102, 102, 102, 1);font-size: 14px;margin-top: 10px;">确定赠送此订单吗？此操作无法撤回！</view>
+      <view class="alert-btn">
+        <button bindtap="hideShareOrder">取消</button>
+        <button bindtap="goshare" open-type="share" style="background-color: rgba(241, 255, 252, 1);border: 1px solid rgba(145, 207, 196, 1);">确认</button>
+      </view>
+    </view>
+  </view>
+</view>

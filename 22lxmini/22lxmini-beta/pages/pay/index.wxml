@@ -1,0 +1,89 @@
+<!--pages/pay/index.wxml-->
+<navigation-bar model:scrollTop="{{ 100 }}"></navigation-bar>
+
+<view class="pay-body">
+  <view class='jiao'>
+    <view class="top">
+      <view class="user-touxiang">
+        <image src="/images/logo.png"></image>
+      </view>
+      <view class="top-title">
+        预约成功
+      </view>
+      <view class="top-tip">
+        <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-xin"></text>
+        感谢您订购本公司产品
+      </view>
+      <view class="line"></view>
+      <view class="top-num">
+        目前已有 <text>{{200+orderNum}}</text> 位用户排队等候...
+      </view>
+      <view class="top-info">
+        <view>现已向工厂发送通知</view>
+        <view style="margin: 25px 0 12px 0;">目前您的订单将由<text>001</text>号工厂发出
+          <text style="color: rgba(77, 103, 234, 1);font-size: 13px;" class="iconfont icon-che"></text>
+        </view>
+      </view>
+    </view>
+    <view class="quan-body">
+      <view class="quanBG1 quanBG"></view>
+      <view class="quanBG2 quanBG"></view>
+    </view>
+    <view class="bottom">
+      <view class="bom-title">
+        服务类型：{{goodList[serviceType].name}}
+      </view>
+
+      <view class="goods-item">
+        <view class="goods-content">
+          <view class="goods-service">
+            <view>
+              <view> <text style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+              </view>
+              <view>灵心心脏保护套装</view>
+            </view>
+            <view class="gun"></view>
+          </view>
+
+          <view class="goods-service">
+            <view>
+              <view> <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+              </view>
+              <view>AI智能预防采集筛查/AI Mode</view>
+            </view>
+            <view class="gun"></view>
+          </view>
+
+          <view class="goods-service">
+            <view>
+              <view><text style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text></view>
+              <view>全场景模式覆盖筛查/Happy Hour Mode</view>
+            </view>
+            <view class="gun"></view>
+          </view>
+
+          <view class="goods-service">
+            <view>
+              <view> <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+              </view>
+              <view>医生专业报告服务{{goodList[serviceType].num}}月/Clinical Mode</view>
+            </view>
+            <view class="gun" style="background-color: transparent;"></view>
+          </view>
+        </view>
+        <view class="goods-price">
+          <text>现价：￥{{goodList[serviceType].priceNew}}</text>
+          <text wx:if="{{goodList[serviceType].priceOld.length>0}}" style="text-decoration: line-through;margin-left: 8px;">￥{{goodList[serviceType].priceOld}}</text>
+
+          <text style="margin: 0 10px;">|</text>
+          <text>每天：￥{{goodList[serviceType].priceDay}}</text>
+
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view bindtap="payplay" class="play-btn">
+  <text>确认</text>
+</view>

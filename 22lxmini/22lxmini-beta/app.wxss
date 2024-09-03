@@ -1,0 +1,227 @@
+/**app.wxss**/
+page {
+  /* width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden; */
+}
+
+.container {
+  background-color: #fff;
+  width: 750rpx;
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  color: rgba(33, 33, 33, 1);
+}
+
+.container .body {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* 
+.container .body view {
+  margin: 0 28rpx;
+} */
+
+view {
+  box-sizing: border-box;
+}
+
+.bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.pd-28 {
+  padding: 0 28rpx;
+}
+
+.alert {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-container {
+  flex: none;
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.alert-container image {
+  width: 100%;
+}
+
+.alert-body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 25%;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.alert-body {
+  flex: none;
+}
+
+.alert-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.alert-btn button {
+  width: 80px !important;
+  height: 28px;
+  line-height: 26px;
+  flex: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 13px !important;
+  border-radius: 30px;
+  font-weight: normal;
+  background-color: rgba(217, 217, 217, 1);
+  box-sizing: border-box;
+  border: 1px solid rgba(217, 217, 217, 1);
+}
+
+.alert-content {
+  flex: auto;
+}
+
+
+@font-face {
+  font-family: "iconfont"; /* Project id 3970697 */
+  src: url('//at.alicdn.com/t/c/font_3970697_wgpr9wxzpy.woff2?t=1680750128935') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3970697_wgpr9wxzpy.woff?t=1680750128935') format('woff'),
+       url('//at.alicdn.com/t/c/font_3970697_wgpr9wxzpy.ttf?t=1680750128935') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-liwu1:before {
+  content: "\e60b";
+}
+
+.icon-VIP:before {
+  content: "\e876";
+}
+
+.icon-tipvip:before {
+  content: "\e664";
+}
+
+.icon-ld:before {
+  content: "\e601";
+}
+
+.icon-xin1:before {
+  content: "\e602";
+}
+
+.icon-xin:before {
+  content: "\e603";
+}
+
+.icon-liwu:before {
+  content: "\e604";
+}
+
+.icon-yifu:before {
+  content: "\e605";
+}
+
+.icon-fuwu1:before {
+  content: "\e606";
+}
+
+.icon-vip:before {
+  content: "\e607";
+}
+
+.icon-xiadan:before {
+  content: "\e608";
+}
+
+.icon-zan:before {
+  content: "\e609";
+}
+
+.icon-che:before {
+  content: "\e60a";
+}
+
+.icon-go-back-left-arrow:before {
+  content: "\e600";
+}
+
+
+.inputerror {
+  border-bottom: 1px solid red !important;
+}
+
+.info-item {
+  box-sizing: border-box;
+}
+
+.inputerror .item-label {
+  color: red;
+}
+
+.tips {
+  width: 100%;
+  height: 28px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  line-height: 28px;
+  overflow: hidden;
+}
+
+.tips view {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  transform: translateY(-100%);
+  transition: transform 3s;
+}
+
+.tips .tipsShow {
+  transform: translateY(0);
+}
+

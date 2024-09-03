@@ -1,0 +1,6 @@
+/* pages/index1/index.wxss */
+.devices_item {
+  padding: 10rpx;
+  text-align: center;
+  border: 1px solid #999;
+}

@@ -1,0 +1,133 @@
+<!--pages/goods/index.wxml-->
+<view class="container" style="background-color: #ccc;">
+  <navigation-bar></navigation-bar>
+  <view class="body pd-28">
+    <view class="goods-item">
+      <view class="goods-title">月度服务</view>
+      <view class="goods-content">
+        <view class="goods-service">
+          <view>
+            <view>图标</view>
+            <view>心电智能检测及报告服务</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view>图标</view>
+            <view>衣服一件采集器套装</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view>图标</view>
+            <view>心电智能检测及报告服务</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view>图标</view>
+            <view>衣服一件采集器套装</view>
+          </view>
+          <view class="gun" style="background-color: transparent;"></view>
+        </view>
+      </view>
+      <view class="goods-price">
+        <text>每月：￥33.3/月</text>
+        <text style="margin: 0 10px;">|</text>
+        <text>年度：￥1125/年</text>
+      </view>
+    </view>
+
+    
+    <view class="goods-item">
+      <view class="goods-title">月度服务</view>
+      <view class="goods-content">
+        <view class="goods-service">
+          <view>
+            <view>图标</view>
+            <view>心电智能检测及报告服务</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view>图标</view>
+            <view>衣服一件采集器套装</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view>图标</view>
+            <view>心电智能检测及报告服务</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view>图标</view>
+            <view>衣服一件采集器套装</view>
+          </view>
+          <view class="gun" style="background-color: transparent;"></view>
+        </view>
+      </view>
+      <view class="goods-price">
+        <text>每月：￥33.3/月</text>
+        <text style="margin: 0 10px;">|</text>
+        <text>年度：￥1125/年</text>
+      </view>
+    </view>
+
+    
+    <view class="goods-item">
+      <view class="goods-title">月度服务</view>
+      <view class="goods-content">
+        <view class="goods-service">
+          <view>
+            <view>图标</view>
+            <view>心电智能检测及报告服务</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view>图标</view>
+            <view>衣服一件采集器套装</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view>图标</view>
+            <view>心电智能检测及报告服务</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view>图标</view>
+            <view>衣服一件采集器套装</view>
+          </view>
+          <view class="gun" style="background-color: transparent;"></view>
+        </view>
+      </view>
+      <view class="goods-price">
+        <text>每月：￥33.3/月</text>
+        <text style="margin: 0 10px;">|</text>
+        <text>年度：￥1125/年</text>
+      </view>
+    </view>
+  </view>
+</view>

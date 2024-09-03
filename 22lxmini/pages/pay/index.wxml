@@ -1,0 +1,72 @@
+<!--pages/pay/index.wxml-->
+<navigation-bar model:scrollTop="{{ 100 }}"></navigation-bar>
+<wxs module="filters" src="../../utils/tool.wxs"></wxs>
+<view class="pay-body">
+  <view class='jiao'>
+    <view class="top">
+      <view class="user-touxiang">
+        <image src="/images/logo.png"></image>
+      </view>
+      <view class="top-title">
+        预约成功
+      </view>
+      <view class="top-tip">
+        <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-xin"></text>
+        感谢您订购本公司产品
+      </view>
+      <view class="line"></view>
+      <view class="top-num">
+        目前已有 <text>{{200+orderNum}}</text> 位用户排队等候...
+      </view>
+      <view class="top-info">
+        <view>现已向工厂发送通知</view>
+        <view style="margin: 25px 0 12px 0;">目前您的订单将由<text>001</text>号工厂发出
+          <text style="color: rgba(77, 103, 234, 1);font-size: 13px;" class="iconfont icon-che"></text>
+        </view>
+      </view>
+    </view>
+    <view class="quan-body">
+      <view class="quanBG1 quanBG"></view>
+      <view class="quanBG2 quanBG"></view>
+    </view>
+    <view class="bottom">
+      <view class="bom-title">
+        服务类型：{{taocanName}}
+      </view>
+
+      <view class="goods-item">
+        <view class="goods-content">
+
+          <view wx:for="{{ contentList }}" wx:for-index="idx" wx:for-item="itemname" class="goods-service">
+            <view>
+              <view>
+                <text wx:if="{{ idx%2===0 }}" style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+                <text wx:else="" style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+              </view>
+              <view>
+                {{ itemname }}
+                <!-- <view>一年</view> -->
+              </view>
+            </view>
+            <view class="gun"></view>
+          </view>
+        </view>
+        <view class="goods-price">
+          <text>现价：￥{{ filters.toFix(price * discount) }}</text>
+          <!-- <text wx:if="{{goodList[serviceType].priceOld.length>0}}" style="text-decoration: line-through;margin-left: 8px;">￥{{goodList[serviceType].priceOld}}</text> -->
+
+          <text style="margin: 0 10px;">|</text>
+          <!-- <text>每天：￥{{goodList[serviceType].priceDay}}</text> -->
+
+          <text>每天：￥{{filters.toFix(price * discount/365)}}</text>
+
+
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view bindtap="payplay" class="play-btn">
+  <text>确认</text>
+</view>

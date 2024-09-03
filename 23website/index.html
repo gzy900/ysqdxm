@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>上海移视科技 MVTECH</title>
+
+    <meta property="og:image" content=https://img1.baidu.com/it/u=3314132085,944825934&fm=253&fmt=auto&app=138&f=JPEG?w=390&h=260" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+        .about-txt-title {
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 40px;
+            padding-left: 60px;
+        }
+
+        .about-txt-content {
+            font-size: 18px;
+            margin-top: 24px;
+            line-height: 150%;
+            letter-spacing: 1px;
+            padding-left: 60px;
+        }
+
+        .about-txt-content > span {
+            display: block;
+            margin-top: 6px;
+        }
+
+        .about-txt-content > span > span {
+            color: #2F53A4;
+            font-weight: bold;
+        }
+
+        .txt-bg {
+            padding-top: 10px;
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+
+        .ccu-data {
+            position: relative;
+            height: 460px;
+            overflow: hidden;
+        }
+
+        .ccu-data > img {
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .ccu-data-content-s {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0 33px 0 40px;
+        }
+
+        .ccu-data-content-s p {
+            color: #fff;
+            line-height: 1;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .ccu-data-content-s .c6 {
+            font-size: 36px;
+            margin-top: 20px;
+        }
+
+        .ccu-data-content-s .c7 {
+            font-size: 30px;
+            margin-top: 5px;
+        }
+
+        .ccu-data-content-s .c8 {
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        .ccu-data-content-s .icon-svg {
+            width: 48px;
+            height: 48px;
+            display: inline-block;
+        }
+
+
+        .ccu-data-content-s .icon-svg {
+            width: 48px;
+            height: 48px;
+            display: inline-block;
+        }
+
+        .ccu-data-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+        }
+
+        .ccu-data-content p {
+            line-height: 1;
+            color: #fff;
+        }
+
+        .ccu-data-content .c1 {
+            font-size: 58px;
+            margin-top: 24px;
+
+        }
+
+        .ccu-data-content .c2 {
+            font-size: 48px;
+            /*margin-top: 52px;*/
+            margin-top: 92px;
+        }
+
+        .ccu-data-content .c3 {
+            font-size: 30px;
+            margin-top: 10px;
+            height: 130px;
+            display: flex;
+            align-items: center;
+        }
+
+        .ccu-data-content .c3 span {
+            line-height: 40px;
+        }
+
+        .ccu-data-content .c4 {
+            margin-top: 8px;
+            font-size: 16px;
+            height: 44px;
+            width: 225px;
+        }
+
+        .ccu-data-content .c5 {
+            width: 270px;
+            margin-top: 52px;
+            font-size: 18px;
+            color: rgba(248, 248, 248, 0.84);
+            line-height: 26px;
+        }
+
+        .ccu-data-s {
+
+        }
+
+        .blog-content {
+            display: flex;
+            flex-direction: row;
+            margin: -10px;
+        }
+
+        .blog-content > div {
+            width: 50%;
+            flex: auto;
+            padding: 10px;
+        }
+
+        .blog-content-right {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            margin: -10px;
+
+        }
+
+        .blog-content-right > p {
+            flex: auto;
+            width: 50%;
+            height: 50%;
+            overflow: hidden;
+            padding: 10px;
+
+        }
+
+        .blog-content-right > p > img {
+            width: 100%;
+            height: 100%;
+            float: left;
+        }
+
+
+        .hezuo {
+            padding: 0 -15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hezuo > div {
+            width: 25%;
+            margin: 0 15px;
+            height: 125px;
+            flex: none;
+            margin-top: 50px;
+            border-radius: 12px;
+            background: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hezuo > div > img {
+        }
+
+
+        .boke-img {
+            background-image: url('image/diqiu.svg');
+            background-repeat: no-repeat;
+            background-position: top right;
+        }
+
+        .boke {
+            padding: 80px;
+            background: linear-gradient(180deg, #DDE7FF -13.69%, rgba(242, 246, 255, 0.00) 100%);
+        }
+
+
+        .blog-content-row .col-lg-6 {
+            height: 400px;
+        }
+
+        .blog-content-row .col-lg-3 {
+            height: 200px;
+        }
+
+
+        .blog-content-row > div {
+            margin-top: 30px;
+
+        }
+
+        .blog-content-row img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .blog-content-row p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: calc(100% - 30px);
+            background-color: rgba(34, 73, 132, 0.66);
+            margin: 0 15px;
+            color: #fff;
+
+        }
+
+
+        .blog-content-row .col-lg-6 p {
+
+            height: 70px;
+            line-height: 70px;
+            padding: 0 25px;
+            font-size: 22px;
+        }
+
+        .blog-content-row .col-lg-3 p {
+
+            height: 40px;
+            line-height: 40px;
+            padding: 0 25px;
+            font-size: 18px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="header-logo">
+                <!--                <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse"-->
+                <!--                        data-target="#main-nav">-->
+                <!--                    <span class="sr-only">Toggle navigation</span>-->
+                <!--                    <span class="icon-bar"></span>-->
+                <!--                    <span class="icon-bar"></span>-->
+                <!--                    <span class="icon-bar"></span>-->
+                <!--                </button>-->
+                <!--                <a href="index.html" class="navbar-brand scroll-top">-->
+                <!--                    <div class="logo">移视科技</div>-->
+                <!--                </a>-->
+                <a href="index.html">
+                </a>
+            </div>
+            <!--/.navbar-header-->
+            <div id="main-nav" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html" class="scroll-link liActive">主页</a></li>
+                    <li><a href="product.html" class="scroll-link" data-id="about">产品介绍</a></li>
+                    <li><a href="about.html">公司介绍</a></li>
+                    <li><a href="contact.html" class="scroll-link " data-id="portfolio">联系我们</a></li>
+                    <li><a href="download.html" class="scroll-link " data-id="portfolio">下载专区</a></li>
+                    <li><a href="login.html" class="scroll-link" data-id="contact">登录</a></li>
+                </ul>
+            </div>
+            <!--/.navbar-collapse-->
+        </nav>
+        <!--/.navbar-->
+    </div>
+    <!--/.container-->
+</div>
+<!--/.header-->
+<section class="cd-hero">
+    <ul class="cd-hero-slider autoplay">
+        <!--
+            <ul class="cd-hero-slider autoplay"> for slider auto play
+            <ul class="cd-hero-slider"> for disabled auto play
+        -->
+        <li class="selected first-slide">
+
+
+            <div class="cd-full-width">
+                <div class="tm-slide-content-div slide-caption text-right">
+
+
+                    <h2>创新</h2>
+                    <p>创意纳百家之言，钻研盛自由之风</p>
+                    <div class="primary-button">
+                        <!--                            <a href="#" class="scroll-link" data-id="about">发现更多</a>-->
+                    </div>
+                </div>
+            </div> <!-- .cd-full-width -->
+        </li>
+
+        <li class="second-slide">
+            <div class="cd-full-width">
+                <div class="tm-slide-content-div slide-caption text-center">
+                    <h2>智能</h2>
+                    <p>智启未来，能我所能。</p>
+                    <div class="primary-button">
+                        <!--                            <a href="#">阅读更多</a>-->
+                    </div>
+                </div>
+            </div> <!-- .cd-full-width -->
+        </li>
+
+        <li class="third-slide">
+            <div class="cd-full-width">
+                <div class="tm-slide-content-div slide-caption text-left">
+
+                    <h2>科技</h2>
+                    <p>科学技术是第一生产力。</p>
+                    <div class="primary-button">
+                        <!--                            <a href="#">查看详细信息</a>-->
+                    </div>
+                </div>
+            </div> <!-- .cd-full-width -->
+        </li>
+
+    </ul> <!-- .cd-hero-slider -->
+
+    <div class="cd-slider-nav">
+        <nav>
+            <span class="cd-marker item-1"></span>
+
+            <ul>
+                <li class="selected"><a href="#0"></a></li>
+                <li><a href="#0"></a></li>
+                <li><a href="#0"></a></li>
+            </ul>
+        </nav>
+    </div> <!-- .cd-slider-nav -->
+</section> <!-- .cd-hero -->
+
+<div class="page-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <img src="img/1.svg"/>
+            </div>
+            <div class="col-lg-7">
+                <p class="about-txt-title">上海移视网络科技有限公司</p>
+                <p class="about-txt-content">
+                    <span>围绕心肌梗死、猝死、心脏压力、缺血性脑卒中等病种，通过人工智能分析预警系统、诊疗与居家场景下的智能医疗器械与医疗服务平台，进行以病种为中心的<span>心血管疾病早期饰查、国手术期监测、术后康复和慢病管理等领域</span>的风险评估和健康管理。</span>
+                    <span><span>企业使命：</span>聚焦心梗及其他心血管疾病问题，运用AI进行技术服务与智能医疗器械的创新，提供便捷的院内外心脏疾病筛查、预警及康复管理解决方案。</span>
+                    <span><span>企业愿景：</span>成为中国第一梯队的心血管数字医疗健康综合数字服务品牌。</span>
+                    <span><span>企业价值观：</span>知行合一，守护心脏，守护家庭，守护爱。</span>
+                </p>
+
+                <div class="row" style="text-align: right;margin-top: 10px">
+                    <a href="about.html">
+                        <button style="color: #2D50A0;border: 1px solid #2D50A0;margin-right: 20px" class="layui-btn layui-btn-radius layui-btn-primary">了解更多</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-section" style="padding:80px">
+    <div class="container">
+        <div class="section-heading txt-bg" style="background-image: url('image/zyyw.svg')">
+            <h2>主营业<span style="color: #DE7718">务</span></h2>
+            <div class="line-dec" style="margin-top: 10px"></div>
+        </div>
+        <div style="margin-top: 30px" class="row">
+            <div class="col-lg-4">
+                <div class="ccu-data">
+                    <img src="image/zy2.png"/>
+
+                    <div class="ccu-data-content">
+                        <p class="c2">
+                            <span class="icon-svg">
+                                <img src="image/diannao.svg">
+                            </span>
+                        </p>
+
+                        <p class="c3">
+                            <span>
+                                数字疗法与
+                                <br/>智能可穿戴设备
+                            </span>
+                        </p>
+                        <p class="c4">Digital therapy and Smart wearable devices</p>
+
+<!--                        <p class="c5">这是一段介绍，关于公司的设备总数的文案文案</p>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="ccu-data">
+                    <img src="image/ccu-bg.svg"/>
+                    <div class="ccu-data-content">
+                        <p class="c2">
+                            <span class="icon-svg">
+                                <img src="image/diannao.svg">
+                            </span>
+                        </p>
+
+                        <p class="c3">
+                            <span>
+                                生命监测与医学影像
+                            </span>
+                        </p>
+                        <p class="c4">Vital monitoring and medical imaging</p>
+
+<!--                        <p class="c5">这是一段介绍，关于公司的设备总数的文案文案</p>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="ccu-data">
+                    <img src="image/zy1.png"/>
+
+                    <div class="ccu-data-content">
+                        <p class="c2">
+                            <span class="icon-svg">
+                                <img src="image/diannao.svg">
+                            </span>
+                        </p>
+
+                        <p class="c3">
+                            <span>
+                                AI信息化数据服务
+                            </span>
+                        </p>
+                        <p class="c4">AI information data service</p>
+
+<!--                        <p class="c5">这是一段介绍，关于公司的设备总数的文案文案</p>-->
+                    </div>
+                </div>
+            </div>
+
+            <!--            <div class="col-lg-4" style="padding: 0">-->
+            <!--                <div class="ccu-data">-->
+            <!--                    <img src="image/ccu-bg-s.svg"/>-->
+            <!--                    <div class="ccu-data-content-s">-->
+            <!--                        <p class="c6">-->
+            <!--                            <span class="icon-svg">-->
+            <!--                                <img src="image/ecg.svg">-->
+            <!--                            </span>-->
+            <!--                            <span class="ccu-value">100930/m</span>-->
+            <!--                        </p>-->
+            <!--                        <p class="c7">心电图</p>-->
+            <!--                        <p class="c8">electrocardiogram</p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="ccu-data" style="margin-top: 17px">-->
+            <!--                    <img src="image/ccu-bg-s.svg"/>-->
+
+            <!--                    <div class="ccu-data-content-s">-->
+            <!--                        <p class="c6">-->
+            <!--                            <span class="icon-svg">-->
+            <!--                                <img src="image/xueya.svg">-->
+            <!--                            </span>-->
+            <!--                            <span class="ccu-value">100930/m</span>-->
+            <!--                        </p>-->
+            <!--                        <p class="c7">心电图</p>-->
+            <!--                        <p class="c8">electrocardiogram</p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="ccu-data" style="margin-top: 18px">-->
+            <!--                    <img src="image/ccu-bg-s.svg"/>-->
+
+            <!--                    <div class="ccu-data-content-s">-->
+            <!--                        <p class="c6">-->
+            <!--                            <span class="icon-svg">-->
+            <!--                                <img src="image/xueyang.svg">-->
+            <!--                            </span>-->
+            <!--                            <span class="ccu-value">100930/m</span>-->
+            <!--                        </p>-->
+            <!--                        <p class="c7">心电图</p>-->
+            <!--                        <p class="c8">electrocardiogram</p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+    </div>
+</div>
+
+<div class="boke-img">
+    <div class="page-section boke">
+        <div class="container">
+            <div class="section-heading txt-bg" style="background-image: url('image/bkxc.svg')">
+                <h2>博客<span style="color: #DE7718">现</span>场</h2>
+                <div class="line-dec" style="margin-top: 10px"></div>
+            </div>
+            <div class="row blog-content-row">
+                <div class="col-lg-6">
+                    <img src="img/i1.png">
+                    <p>援藏（最高至珠峰为援藏干部提供保障）</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/i2.png">
+                    <p>南极（最远至南极为科考队员提供保障）</p>
+
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/i3.png">
+                    <p>救治老奶奶（助力分级诊疗救治百岁老人）</p>
+
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/i10.png">
+                    <p>学习强国（“上海方案”两次登陆学习强国）</p>
+
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/i4.png">
+                    <p>两次诺奖（建立诺奖工作室）</p>
+
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/i5.png">
+                    <p>上海火车站（纳入上海火车站急救体系）</p>
+
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/i6.png">
+                    <p>进博会（参与第二届进博会）</p>
+
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/i7.png">
+                    <p>以色列（以色列全球创新大会主旨演讲）</p>
+
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/i8.png">
+                    <p>欧洲（欧洲心血管年会AI创新第二名）</p>
+
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/i9.png">
+                    <p>东方心血管（东方心血管年会AI主旨演讲）</p>
+
+                </div>
+            </div>
+            <!--            <div class="blog-content" style="margin-top: 30px">-->
+            <!--                <div>-->
+            <!--                    <img src="img/portfolio_02.jpg">-->
+            <!--                </div>-->
+            <!--                <div class="blog-content-right">-->
+            <!--                    <p>-->
+            <!--                        <img src="img/portfolio_03.jpg">-->
+
+            <!--                    </p>-->
+            <!--                    <p>-->
+            <!--                        <img src="img/portfolio_04.jpg">-->
+
+            <!--                    </p>-->
+            <!--                    <p>-->
+            <!--                        <img src="img/portfolio_08.jpg">-->
+
+            <!--                    </p>-->
+            <!--                    <p>-->
+            <!--                        <img src="img/portfolio_05.jpg">-->
+            <!--                    </p>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+    </div>
+</div>
+
+<!--<div class="container" style="margin-top: 60px">-->
+<!--    <div class="section-heading txt-bg" style="background-image: url('image/ccu.svg')">-->
+<!--        <h2><span style="color: #DE7718">资</span>讯分享</h2>-->
+<!--        <div class="line-dec" style="margin-top: 10px"></div>-->
+<!--    </div>-->
+<!--    <div style="margin-top: 30px" class="row">-->
+<!--        <div class="col-lg-4">-->
+<!--            <div class="info-content">-->
+<!--                <p class="info-cover">-->
+<!--                    <img src="img/slide_01.jpg"/>-->
+<!--                </p>-->
+<!--                <p class="info-title">心脑血管疾病的预防</p>-->
+<!--                <div class="line-dec"></div>-->
+<!--                <p class="info-text">防止栓塞血管尤其是冠状动脉冬季寒冷时容易收缩、痉挛,发生供血不足,并可能导致栓塞并可能导致栓塞并可能导致栓塞</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-lg-4">-->
+<!--            <div class="info-content">-->
+<!--                <p class="info-cover">-->
+<!--                    <img src="img/slide_01.jpg"/>-->
+<!--                </p>-->
+<!--                <p class="info-title">心脑血管疾病的预防</p>-->
+<!--                <div class="line-dec" style="margin-top: 10px"></div>-->
+
+<!--                <p class="info-text">防止栓塞血管尤其是冠状动脉冬季寒冷时容易收缩、痉挛,发生供血不足,并可能导致栓塞并可能导致栓塞并可能导致栓塞</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-lg-4">-->
+<!--            <div class="info-content">-->
+<!--                <p class="info-cover">-->
+<!--                    <img src="img/slide_01.jpg"/>-->
+<!--                </p>-->
+<!--                <p class="info-title">心脑血管疾病的预防</p>-->
+<!--                <div class="line-dec" style="margin-top: 10px"></div>-->
+
+<!--                <p class="info-text">防止栓塞血管尤其是冠状动脉冬季寒冷时容易收缩、痉挛,发生供血不足,并可能导致栓塞并可能导致栓塞并可能导致栓塞</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="row" style="text-align: center;margin-top: 70px">-->
+<!--        <a href="new-list.html">-->
+<!--            <button style="color: #2D50A0;border: 1px solid #2D50A0;" class="layui-btn layui-btn-radius layui-btn-primary">了解更多</button>-->
+<!--        </a>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
+
+<div class="page-section" style="margin-top:80px;padding:80px; background-image: url('image/hezuo.png')">
+    <div class="container" style="">
+        <div class="section-heading txt-bg" style="background-image: url('image/hzhb.svg')">
+            <h2 style="color: #fff">合作伙伴</h2>
+        </div>
+        <div class="hezuo">
+            <div><img src="image/guoyao.svg"/></div>
+            <div><img src="image/yuanhe.svg"/></div>
+            <div><img src="image/astart.svg"/></div>
+        </div>
+        <div class="hezuo">
+            <div><img src="image/lianying.svg"/></div>
+            <div><img src="image/geyiliao.svg"/></div>
+            <div><img src="image/yingtai.svg"/></div>
+            <div><img src="image/xiangrik.svg"/></div>
+        </div>
+        <div class="hezuo">
+            <div><img src="image/z1.svg"/></div>
+            <div><img src="image/z2.svg"/></div>
+            <div><img src="image/z3.svg"/></div>
+            <div><img src="image/z4.svg"/></div>
+        </div>
+    </div>
+</div>
+
+<div class="page-section" style="padding: 80px; background: linear-gradient(180deg, #EAF1FF 0%, rgba(234, 241, 255, 0.00) 100%);">
+    <div class="container" style="position: relative">
+
+        <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%)">
+            <img src="image/yiyuan1.svg"/>
+            <p style="font-size:40px;line-height:50px;font-weight:bold;color:#1644AD;width: 100%;height: auto;position: absolute;top: 50%;left: 1%;text-align: center;transform: translateY(-50%)">
+                60+<br>
+                覆盖医院
+            </p>
+        </div>
+        <img src="image/yiyuan.svg" style="position: relative"/>
+    </div>
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="font-content" style="font-size: 18px;">
+            <div class="font-content-left">
+                <p class="font-content-left-top">
+                    Copyright © 2020 Company Name - Design: 移视科技 - Collect from 移视科技
+                </p>
+                <p>上海移视网络科技有限公司 </p>
+                <p>备案号：沪ICP备18036487号-3</p>
+            </div>
+            <div class="">
+                <p>商务合作</p>
+                <p class="font-mail">邮箱：yishi@mvtech.cc</p>
+                <p>联系人：高梓桓</p>
+                <p>手机号：13795384843</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.7.0.min.js"><\/script>')</script>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+    var scrollList = [
+        {
+            id: "about"
+        },
+        {
+            id: "fun-facts"
+        },
+        {
+            id: "info"
+        },
+        {
+            id: "portfolio"
+        },
+        {
+            id: "contact"
+        },
+    ]
+    $(document).ready(function () {
+        // navigation click actions
+        // $('.scroll-link').on('click', function (event) {
+        //     event.preventDefault();
+        //     var sectionID = $(this).attr("data-id");
+        //     scrollToID('#' + sectionID, 750);
+        // });
+        // scroll to top action
+        $('.scroll-top').on('click', function (event) {
+            event.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+
+        $('.news-click').on('click', function () {
+            var id = $(this).attr('data-id') || '1'
+            window.location.href = 'new-details.html?id=' + id
+        })
+
+        $(".service-item").on('click', function () {
+            alert('请先付费，付费后点击跳转查看详情！')
+        })
+
+
+        for (var i = 0; i < scrollList.length; i++) {
+            $("#" + scrollList[i].id).addClass('animation')
+        }
+        $(document).scroll(function (e) {
+            var height = $(window).height()
+            var top = $(document).scrollTop() + height
+            for (var i = 0; i < scrollList.length; i++) {
+                var dom = $("#" + scrollList[i].id)
+                var domHeight = dom.height()
+                var domTop = dom.offset().top + (domHeight)
+                if (top > domTop) {
+                    $("#" + scrollList[i].id).removeClass('animation')
+                }
+            }
+        })
+    });
+
+
+    function getQueryString(name) {
+        var result = window.location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
+        if (result == null || result.length < 1) {
+            return "";
+        }
+        return result[1];
+    }
+
+
+    // scroll function
+    function scrollToID(id, speed) {
+        var offSet = 50;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({ scrollTop: targetOffset }, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+
+    if (typeof console === "undefined") {
+        console = {
+            log: function () {
+            }
+        };
+    }
+
+    var scrollId = getQueryString('id') || null
+    if (scrollId != null) {
+        scrollToID('#' + scrollId, 750);
+
+    }
+
+    layui.use('dropdown', function () {
+        var dropdown = layui.dropdown
+        dropdown.render({
+            elem: '#user',
+            data: [{
+                title: '退出登录'
+                , id: 100
+                , href: '#'
+            }]
+            , id: 'demo1'
+            //菜单被点击的事件
+            , click: function (obj) {
+                if (obj.id == 100) {
+                    localStorage.removeItem('username')
+                    location.href = "login.html"
+                }
+            }
+        });
+    });
+
+    if (localStorage.getItem('username')) {
+        $('.username').show()
+        $("#username").text(localStorage.getItem('username'))
+        $('.goSign').hide()
+    } else {
+        $('.username').hide()
+        $('.goSign').show()
+    }
+
+
+</script>
+</body>
+</html>

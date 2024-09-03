@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button bindtap="wxLogin" style="margin-top: 50px;">用户登录</button>
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" style="margin-top: 50px;"> 获取头像昵称 </button>
+
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号码</button>
+
+      <button bindtap="payplay" style="margin-top: 50px;">支付</button>
+
+      <button bindtap="payStart" style="margin-top: 50px;">调起</button>
+
+
+
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>

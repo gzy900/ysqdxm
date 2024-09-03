@@ -1,0 +1,13 @@
+<!-- 自定义顶部栏 -->
+<view class="nav-bar" style="height:{{navBarHeight}}px;background-color: rgba(70, 137, 229, {{scrollTop/100}});">
+  <!-- <input class="search" placeholder="输入关键词！" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; left:{{menuRight}}px; top:{{menuTop}}px;"></input> -->
+  <view class="nav-bar-body" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; top:{{menuTop}}px;width: {{menuLeft}}px;">
+    <view bindtap="goback" class="nav-retrun" style="width: {{windowWidth - menuLeft}}px;opacity: {{isShowGoBack}};">
+      <text class="iconfont icon-go-back-left-arrow"></text>
+    </view>
+    <view class="nav-title">{{defaultData.title}}</view>
+  </view>
+</view>
+
+<!-- 占位，高度与顶部栏一样 -->
+<view style="height:{{navBarHeight}}px;"></view>

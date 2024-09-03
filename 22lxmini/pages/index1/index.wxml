@@ -1,0 +1,237 @@
+<!--pages/index1/index.wxml-->
+<view class="container">
+  <navigation-bar isShowGoBack="{{0}}" model:scrollTop="{{scrollTop}}"></navigation-bar>
+  <image class="bg" mode="widthFix" src="/images/bg.jpg"></image>
+  <view class="body pd-28" style="padding-bottom: 80px;">
+    <view style="font-size: 18px;color: #fff;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">欢迎使用移视预约小程序</view>
+    <view class="userInfo">
+      <view class="logo">
+        <image src="/images/logo.png" mode="widthFix"></image>
+        <!-- <text wx:if="{{userInfo.vip===1}}" style="color: rgba(255, 170, 68, 1)" class="iconfont icon-vip vipTip"></text> -->
+      </view>
+      <view class="info">
+        <view style="display: flex;align-items: center;">
+          <text style="margin-right: 8px;">邀请码：{{userInfo.inviteCode}}</text>
+          <text wx:if="{{userInfo.vip===1}}" style="color: rgba(33, 33, 33, 1);font-size: 28px;" class="iconfont icon-tipvip"></text>
+        </view>
+        <view wx:if="{{userInfo.vip===1}}">已售出：{{shareOrderNum}}
+
+        </view>
+      </view>
+    </view>
+
+
+
+    <!-- <view wx:if="{{dataList.length>0}}" class="loadApp">
+      <view class="loadApp-icon">
+        <text style="color: #fff;font-size: 20px;" class="iconfont icon-xin1"></text>
+      </view>
+      <view class="loadApp-txt">
+        <view>您已购买本公司移视||型心电监测产品</view>
+        <view>请前往Appstroe或应用市场进行app下载</view>
+      </view>
+    </view> -->
+
+    <view class="order-list">
+      <view class="order" wx:for="{{ dataList }}" wx:key="index">
+        <view class="order-heard">
+          <view class="order-heard-title">{{giftTypeList[item.giftType]}}</view>
+          <view class="order-heard-btn">
+            <button wx:if="{{ item.giftType===0||item.giftType===2 }}" bindtap="goinfo" data-order="{{item}}" style="color: rgba(252, 189, 53, 1);">修改</button>
+            <button wx:if="{{ item.giftType===0 }}" style="margin: 0 10px;">|</button>
+            <button data-orderId="{{item.orderId}}" bindtap="showDefineOrder" wx:if="{{ item.giftType===0}}">赠送</button>
+            <button data-orderId="{{item.orderId}}" bindtap="orderShare" open-type="share" wx:if="{{ item.giftType===1&&item.itemDefault===false}}"  style="color:#E53449">信息未填写重新赠送</button>
+            <button wx:if="{{ item.giftType===1&&item.itemDefault===true}}">
+              <text style="color: rgba(77, 115, 236, 1);font-size:20px;" class="iconfont icon-liwu1"></text>
+            </button>
+          </view>
+        </view>
+        <view class="order-body">
+          <view class="order-user">
+            <view class="order-user-item">
+              <view>姓名</view>
+              <view>{{item.userName||'无'}}</view>
+            </view>
+            <view class="order-user-line"></view>
+            <view class="order-user-item">
+              <view>性别</view>
+              <view>{{sexList[item.sex]||'无'}}</view>
+            </view>
+            <view class="order-user-line"></view>
+            <view class="order-user-item">
+              <view>身高</view>
+              <view>{{item.height?item.height+'cm':'无'}}</view>
+            </view>
+            <view class="order-user-line"></view>
+            <view class="order-user-item">
+              <view>体重</view>
+              <view>{{item.weight?(item.weight+'kg'):'无'}}</view>
+            </view>
+            <view class="order-user-line"></view>
+            <view class="order-user-item">
+              <view>尺码</view>
+              <view>{{item.size||'无'}}</view>
+            </view>
+          </view>
+          <view class="order-info">
+            <view class="order-info-item">
+              <view>服务类型</view>
+              <view>{{serviceList[item.serviceType]||'无'}}</view>
+            </view>
+
+            <view class="order-info-item">
+              <view>订单编号</view>
+              <view>{{item.orderId||'无'}}</view>
+            </view>
+
+            <view class="order-info-item">
+              <view>下单时间</view>
+              <view>{{item.createTimeFormat||'无'}}</view>
+            </view>
+
+            <view class="order-info-item">
+              <view>预计送达</view>
+              <view>{{item.createTimeFormat1||'无'}}</view>
+            </view>
+
+            <view class="order-info-item">
+              <view>联系方式</view>
+              <view>{{item.phone||'无'}}</view>
+            </view>
+
+            <view class="order-info-item">
+              <view>收货地址</view>
+              <view>{{item.addressarea}}</view>
+            </view>
+          </view>
+
+          <!--tips-yes-->
+          <view class="order-tips tips-no">
+            <text style="color:#E53449" wx:if="{{ item.itemDefault===false}}">
+              <text style="" class="iconfont icon-ld"></text> 信息不完整未激活
+            </text>
+            <text style="color: rgba(51, 51, 51, 1);" wx:if="{{ item.itemDefault===true}}">
+              <text style="color: rgba(240, 163, 59, 1);" class="iconfont icon-ld"></text> 信息完整已激活
+            </text>
+
+          </view>
+        </view>
+      </view>
+
+      <view class="order" wx:if="{{dataList.length<=0}}">
+        <view class="order-heard">
+          <view class="order-heard-title">我的订单</view>
+        </view>
+        <view class="order-null">
+          <image src="/images/nullbg.png" mode="widthFix"></image>
+          <text>暂无订单信息</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="app-btn">
+      <share-element key="app-btn" transform duration="300">
+        <button bindtap="gogoods" class="button1" style="background: #FF9C00;">
+          <text style="color: #fff" class="iconfont icon-xiadan"></text>
+          下单</button>
+      </share-element>
+      <view>
+        <button bindtap="shareLx" open-type="share" class="button1" style="background: #4D73EC;"><text style="color: #fff" class="iconfont icon-zan"></text>推荐给好友</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<page-container bind:afterleave='pageHide' wx:if="{{guideHide}}" show="{{guideShow}}" class="page-container" style="height: 100vh;">
+  <swiper class="swiper" autoplay circular interval='5000'>
+  
+    <swiper-item>
+      <image mode="aspectFill" src="https://app.maillife.cn/files/photo//2023/03/30/0e743dfbee904891b8e22f96fcb9a2da1.png"></image>
+
+      
+      <!-- <image mode="aspectFill" src="https://app.maillife.cn/files/photo//2023/03/30/9c5617a6411e4f26ade6f163f708414a3.png"></image> -->
+    </swiper-item>
+    <swiper-item>
+      <image mode="aspectFill" src="https://app.maillife.cn/files/photo//2023/06/27/4f8f1368fa094e509b1a298f02f08a41%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230627140604.png"></image>
+      
+      <!-- <image mode="aspectFill" src="https://app.maillife.cn/files/photo//2023/03/30/0e743dfbee904891b8e22f96fcb9a2da1.png"></image> -->
+
+      
+    </swiper-item>
+    <swiper-item>
+      <!-- <image mode="aspectFill" src="https://app.maillife.cn/files/photo//2023/03/30/3a27f033055b43b1bbad831c503ac69d2.png"></image> -->
+      
+      <image mode="aspectFill" src="https://app.maillife.cn/files/photo//2023/06/27/043c8d59832e43d6869e67b9f81c50c3微信图片_20230627142822.png"></image>
+    </swiper-item>
+
+    
+    <swiper-item>
+      <!-- <image mode="aspectFill" src="https://app.maillife.cn/files/photo//2023/03/30/3a27f033055b43b1bbad831c503ac69d2.png"></image> -->
+      
+      <image mode="aspectFill" src="https://app.maillife.cn/files/photo//2023/10/18/3c84c95e0a30462fa14cb447da18e507%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231018132830.png"></image>
+    </swiper-item>
+
+    
+  </swiper>
+
+  <view class="setup">
+
+    <view class="setup-time">
+      <text class="setup-time-title">预售倒计时</text>
+      <text class="setup-time-time">{{countNum.d}}天{{countNum.h}}时{{countNum.i}}分{{countNum.s}}秒</text>
+      <text class="setup-time-num">已售{{200+orderNum}}件</text>
+    </view>
+
+    <view class="app-btn">
+      <share-element key="app-btn" transform duration="300">
+        <button bindtap="gogoods" class="button1" style="background: #FF9C00;"><text style="color: #fff;" class="iconfont icon-xiadan"></text>预约</button>
+      </share-element>
+      <view>
+        <button class="button1" bindtap="goHome" style="background: #4D73EC;"><text style="color: rgba(240, 163, 59, 1);" class="iconfont icon-tipvip"></text>个人中心</button>
+      </view>
+    </view>
+  </view>
+</page-container>
+
+<view class="alert" wx:if="{{ alertShow }}">
+  <view class="alert-container">
+    <image src="https://app.maillife.cn/files/photo//2023/03/30/466dd3f3670e49ccbc034465baf65841tc.png" mode="widthFix"></image>
+    <view class="alert-body">
+      <view style="font-size: 18px;">提示</view>
+      <view class="alert-content" style="color:rgba(102, 102, 102, 1);font-size: 14px;margin-top: 10px;">您尚未完成您订单信息是否现在填写</view>
+      <view class="alert-btn">
+        <button bindtap="alertHide">否</button>
+        <button bindtap="goShareInfo" style="background-color: rgba(241, 255, 252, 1);border: 1px solid rgba(145, 207, 196, 1);">是</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="alert" wx:if="{{ defineOrder }}">
+  <view class="alert-container">
+    <image src="https://app.maillife.cn/files/photo//2023/03/30/466dd3f3670e49ccbc034465baf65841tc.png" mode="widthFix"></image>
+    <view class="alert-body">
+      <view style="font-size: 18px;">提示</view>
+      <view class="alert-content" style="color:rgba(102, 102, 102, 1);font-size: 14px;margin-top: 10px;">确定赠送此订单吗？此操作无法撤回！</view>
+      <view class="alert-btn">
+        <button bindtap="hideDefineOrder">取消</button>
+        <button bindtap="orderShare1" open-type="share" style="background-color: rgba(241, 255, 252, 1);border: 1px solid rgba(145, 207, 196, 1);">确认</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="alert" wx:if="{{ orderAvailable }}">
+  <view class="alert-container">
+    <image src="https://app.maillife.cn/files/photo//2023/03/30/466dd3f3670e49ccbc034465baf65841tc.png" mode="widthFix"></image>
+    <view class="alert-body">
+      <view style="font-size: 18px;">提示</view>
+      <view class="alert-content" style="color:rgba(102, 102, 102, 1);font-size: 14px;margin-top: 10px;">此礼物已被他人领取，请联系赠送人！</view>
+      <view class="alert-btn">
+        <button bindtap="hideOrderAvailable" style="background-color: rgba(241, 255, 252, 1);border: 1px solid rgba(145, 207, 196, 1);">确认</button>
+      </view>
+    </view>
+  </view>
+</view>

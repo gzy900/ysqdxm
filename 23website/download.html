@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>移视科技-主页</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+
+        .info-jieshao-sub-item p span {
+            border: 1px solid #E2E2E2;
+        }
+
+        .info-jieshao-sub-item p .sub-active {
+            border: 1px solid #7091E7;
+        }
+
+        .content-item {
+            width: 100%;
+        }
+
+        .lx-app {
+            overflow: hidden;
+            position: relative;
+            margin-top: 70px;
+        }
+
+        .lx-app .lx-app-bg {
+            float: right;
+        }
+
+        .lx-app-item {
+            display: flex;
+            margin-bottom: 15px;
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .lx-app-item span {
+            line-height: 24px;
+        }
+
+
+        .lx-app-item span img {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .xdy2 .title {
+            color: #2F54AE;
+            font-family: PingFang SC;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .xdy2-content {
+            overflow: hidden;
+        }
+
+        .xdy2-content-left {
+            width: 670px;
+            float: left;
+        }
+
+        .xdy2-content-right {
+            float: right;
+            width: 441px;
+        }
+
+        .xdy2-content-right .right-title {
+            color: #666;
+            font-family: PingFang SC;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-top: 45px;
+        }
+
+        .xdy2-content-right .right-content {
+            color: #333;
+            text-align: justify;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+            margin-top: 20px;
+        }
+
+        .info-jieshao-sub-item p {
+            width: 25%;
+        }
+
+        .xdy1 {
+            overflow: hidden;
+        }
+
+        .xdy1 .xdy1-left {
+            width: 460px;
+            float: left;
+        }
+
+        .xdy1 .xdy1-desc {
+            color: #333;
+            text-align: justify;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+        }
+
+        .xdy1 .xdy1-right {
+            width: 660px;
+            float: right;
+        }
+
+        .xdy1-img {
+            overflow: hidden;
+        }
+
+        .xdy1-img img {
+            width: 20%;
+            float: left;
+        }
+
+        .dongtaipc {
+            overflow: hidden;
+        }
+
+        .dtpc-left {
+            width: 530px;
+            float: left;
+        }
+
+        .dtpc-right {
+            width: 520px;
+            float: right;
+        }
+
+        .dtpc-left .title {
+            color: #2F54AE;
+            font-family: PingFang SC;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .dtpc-left .desc {
+            color: #333;
+            text-align: justify;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+        }
+
+        .xzayd {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .xzayd .lx-app-bg {
+            width: 1054px;
+            float: right;
+        }
+
+        .xzayd-title {
+            color: #2F54AE;
+            font-family: PingFang SC;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .xzayd .xzayd-title {
+            color: #2F54AE;
+            font-family: PingFang SC;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .xzayd .xzayd-desc {
+            color: #333;
+            text-align: justify;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+        }
+
+        .mesh {
+            overflow: hidden;
+        }
+
+        .mesh .mesh-left {
+            width: 600px;
+            float: left;
+        }
+
+        .mesh .mesh-right {
+            width: 500px;
+            float: right;
+        }
+
+        .mesh-desc {
+            color: #333;
+            text-align: justify;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+            text-indent: 20px;
+        }
+
+        .mesh-title {
+            display: flex;
+            color: #333;
+            font-family: PingFang SC;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+            align-items: center;
+        }
+
+        .mesh-title span {
+            margin-left: 25px;
+            white-space: nowrap;
+
+        }
+
+        .wxxdjcy {
+        }
+
+        .wxxdjcy-title {
+            color: #2F54AE;
+            font-family: PingFang SC;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-top: 70px;
+        }
+
+        .wxxdjcy-body {
+            margin: 0 -10px;
+            overflow: hidden;
+        }
+
+        .wxxdjcy-body > div {
+            display: inline-block;
+            width: 33.3%;
+            padding: 0 10px;
+            float: left;
+        }
+
+        .wxxdjcy-body > div > p {
+            color: #333;
+            font-family: PingFang TC;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            height: 30px;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+
+        .wxxdjcy-body > div > div {
+            width: 100%;
+            height: 329px;
+            border: 1px solid #E2E2E2;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 30px 30px 30px;
+        }
+
+        .wxxdjcy-body > div > div > span {
+            min-height: 20px;
+            line-height: 20px;
+            color: #BBB;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .wxxdjcy-body > div > div > .img {
+            flex: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ccu-body {
+            height: 372px;
+            margin: 0 -10px;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .ccu-body-left {
+            width: 40%;
+            margin: -10px 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .ccu-body-left > div {
+            height: 50%;
+            padding: 10px 0;
+        }
+
+        .ccu-body-left > div > div {
+            height: 100%;
+            border: 1px solid rgba(226, 226, 226, 1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ccu-body-right {
+            width: 60%;
+            height: 100%;
+            padding: 0 10px;
+            float: left;
+        }
+
+        .ccu-body-right div {
+            height: 100%;
+            border: 1px solid rgba(226, 226, 226, 1);
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cd-hero-slider li:first-of-type {
+            background-image: url("image/pd-1.png");
+        }
+
+        .cd-hero-slider li:nth-of-type(2) {
+            background-image: url("image/pd-1.png");
+        }
+
+        .cd-hero-slider li:nth-of-type(3) {
+            background-image: url("image/pd-1.png");
+        }
+
+        .banner-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .banner-content p {
+            margin: 0;
+            margin-top: 15px;
+
+        }
+
+        .banner-content p:first-child {
+            color: #000F33;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .banner-content p:nth-of-type(2) {
+            color: #1D263A;
+            font-family: PingFang SC;
+            font-size: 52px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .banner-content p:nth-of-type(3) {
+            color: #444;
+            font-family: PingFang SC;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .banner-content p:nth-of-type(4) {
+            color: #444;
+            font-family: PingFang SC;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .banner-content p:nth-of-type(5) {
+            margin-top: 100px;
+        }
+
+        .info-jieshao-sub-item p span {
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-jieshao-sub-item p img {
+            width: auto;
+            margin-top: 0;
+        }
+
+        .info-td-item-content-item {
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .product-title {
+            display: flex;
+            background-color: #E7EEFF;
+        }
+
+        .product-title a {
+            flex: auto;
+            cursor: pointer;
+            height: 47px;
+            line-height: 47px;
+            text-align: center;
+            color: #9DAFDA;
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .product-title a:hover {
+            background-color: #C9D9FF;
+            color: #2F54AE;
+            font-weight: bold;
+        }
+
+        .product-title a.active {
+            background-color: #C9D9FF;
+            color: #2F54AE;
+            font-weight: bold;
+        }
+
+        .banner-txt-content {
+            width: 779px;
+            height: 363px;
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(12, 0, 155, 0.02) 0%, rgba(12, 0, 155, 0.23) 100%);
+        }
+
+        .banner-txt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .banner-txt .desc {
+            color: #FFF;
+            text-align: left;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: PingFang SC;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 33px */
+            width: 527px;
+            margin: 44px 0;
+
+        }
+
+        .line-dec {
+            margin:10px 0;
+        }
+
+        .banner-txt .title {
+            color: #FFF;
+            text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+            font-family: PingFang SC;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .banner-txt-content .title-content {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding: 5px 0px;
+            width: auto;
+            margin-top: 100px;
+
+        }
+
+        .banner-txt-content .line-dec {
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="header-logo">
+                <!--                <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse"-->
+                <!--                        data-target="#main-nav">-->
+                <!--                    <span class="sr-only">Toggle navigation</span>-->
+                <!--                    <span class="icon-bar"></span>-->
+                <!--                    <span class="icon-bar"></span>-->
+                <!--                    <span class="icon-bar"></span>-->
+                <!--                </button>-->
+                <!--                <a href="index.html" class="navbar-brand scroll-top">-->
+                <!--                    <div class="logo">移视科技</div>-->
+                <!--                </a>-->
+                <a href="index.html">
+                </a>
+            </div>
+            <!--/.navbar-header-->
+            <div id="main-nav" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html" class="scroll-link">主页</a></li>
+                    <li><a href="product.html" class="scroll-link" data-id="about">产品介绍</a></li>
+                    <li><a href="about.html">公司介绍</a></li>
+                    <li><a href="contact.html" class="scroll-link " data-id="portfolio">联系我们</a></li>
+                    <li><a href="download.html" class="scroll-link liActive" data-id="portfolio">下载专区</a></li>
+                    <li><a href="login.html" class="scroll-link" data-id="contact">登录</a></li>
+                </ul>
+            </div>
+            <!--/.navbar-collapse-->
+        </nav>
+        <!--/.navbar-->
+    </div>
+    <!--/.container-->
+</div>
+<!--/.header-->
+
+<div class="page-section banner">
+    <div class="banner-img">
+        <img src="image/download.png"/>
+    </div>
+    <div class="banner-txt">
+        <div class="banner-txt-content">
+            <p class="title-content">
+                <span class="title">
+                    下载专区
+                </span>
+                <img src="image/shandian.svg"/>
+            </p>
+            <p class="line-dec"></p>
+            <p class="desc">
+                上海移视网络科技有限公司，专注于心脑血管疾病领域人工智能技术的应用和开发。
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="page-section">
+    <div class="container">
+        <div class="content-item dongtaipc" style="margin-top: 130px">
+            <div class="dtpc-left">
+                <p class="title">
+                    动态心电图记录器 PC 端软件-用户端
+                </p>
+                <p class="desc" style="margin-top: 40px">
+                    此产品是脉迩心电衣配套软件，用户端软件点击下载。
+                </p>
+                <p class="down" style="margin-top: 50px">
+                    <a target="blank" href="https://app.mvheartcare.net/xdy_f_file/exe/userSetUp.msi">
+                        <button style="color: #fff;border: 1px solid #2D50A0;background-color:#2D50A0 " class="layui-btn layui-btn-radius layui-btn-primary">点击下载</button>
+                    </a>
+                </p>
+            </div>
+            <div class="dtpc-right">
+                <img src="image/dtpc.png"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="font-content" style="font-size: 18px;">
+            <div class="font-content-left">
+                <p class="font-content-left-top">
+                    Copyright © 2020 Company Name - Design: 移视科技 - Collect from 移视科技
+                </p>
+                <p>上海移视网络科技有限公司 </p>
+                <p>备案号：沪ICP备18036487号-3</p>
+            </div>
+            <div class="">
+                <p>商务合作</p>
+                <p class="font-mail">邮箱：yishi@mvtech.cc</p>
+                <p>联系人：高梓桓</p>
+                <p>手机号：13795384843</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.7.0.min.js"><\/script>')</script>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+    var scrollList = [
+        {
+            id: "about"
+        },
+        {
+            id: "fun-facts"
+        },
+        {
+            id: "info"
+        },
+        {
+            id: "portfolio"
+        },
+        {
+            id: "contact"
+        },
+    ]
+    $(document).ready(function () {
+        // navigation click actions
+        // $('.scroll-link').on('click', function (event) {
+        //     event.preventDefault();
+        //     var sectionID = $(this).attr("data-id");
+        //     scrollToID('#' + sectionID, 750);
+        // });
+        // scroll to top action
+        $('.scroll-top').on('click', function (event) {
+            event.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+
+        $('.news-click').on('click', function () {
+            var id = $(this).attr('data-id') || '1'
+            window.location.href = 'new-details.html?id=' + id
+        })
+
+        $(".service-item").on('click', function () {
+            alert('请先付费，付费后点击跳转查看详情！')
+        })
+
+
+        for (var i = 0; i < scrollList.length; i++) {
+            $("#" + scrollList[i].id).addClass('animation')
+        }
+        $(document).scroll(function (e) {
+            var height = $(window).height()
+            var top = $(document).scrollTop() + height
+            for (var i = 0; i < scrollList.length; i++) {
+                var dom = $("#" + scrollList[i].id)
+                var domHeight = dom.height()
+                var domTop = dom.offset().top + (domHeight)
+                if (top > domTop) {
+                    $("#" + scrollList[i].id).removeClass('animation')
+                }
+            }
+        })
+    });
+
+
+    function getQueryString(name) {
+        var result = window.location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
+        if (result == null || result.length < 1) {
+            return "";
+        }
+        return result[1];
+    }
+
+
+    // scroll function
+    function scrollToID(id, speed) {
+        var offSet = 50;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({ scrollTop: targetOffset }, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+
+    if (typeof console === "undefined") {
+        console = {
+            log: function () {
+            }
+        };
+    }
+
+    var scrollId = getQueryString('id') || null
+    if (scrollId != null) {
+        scrollToID('#' + scrollId, 750);
+
+    }
+
+    layui.use('dropdown', function () {
+        var dropdown = layui.dropdown
+        dropdown.render({
+            elem: '#user',
+            data: [{
+                title: '退出登录'
+                , id: 100
+                , href: '#'
+            }]
+            , id: 'demo1'
+            //菜单被点击的事件
+            , click: function (obj) {
+                if (obj.id == 100) {
+                    localStorage.removeItem('username')
+                    location.href = "login.html"
+                }
+            }
+        });
+    });
+
+    if (localStorage.getItem('username')) {
+        $('.username').show()
+        $("#username").text(localStorage.getItem('username'))
+        $('.goSign').hide()
+    } else {
+        $('.username').hide()
+        $('.goSign').show()
+    }
+
+
+    const lunbo = {
+        ld: {
+            ins: null,
+            ins1: null,
+            insIndex: 0,
+            ins1Current: 0
+        },
+    }
+    layui.use('carousel', function () {
+        var carousel = layui.carousel;
+        //建造实例
+
+        for (const item in lunbo) {
+            lunbo[item].ins = carousel.render({
+                elem: '#lunboid_' + item
+                , width: '100%' //设置容器宽度
+                , height: '375px' //设置容器宽度
+                , arrow: 'none' //始终显示箭头
+                , autoplay: false
+                , indicator: 'none'
+                //,anim: 'updown' //切换动画方式
+            });
+
+            lunbo[item].ins1 = carousel.render({
+                elem: '#lunboidsub_' + item
+                , width: '84%' //设置容器宽度
+                , height: '132px' //设置容器宽度
+                , arrow: 'none' //始终显示箭头
+                , autoplay: false
+                , indicator: 'none'
+                //,anim: 'updown' //切换动画方式
+            });
+        }
+
+        console.log(lunbo.ld.ins)
+    });
+
+
+    let debouncingTime = 0
+
+    function debouncingFun() {
+        let flag = false
+        if (new Date().getTime() - debouncingTime > 500) {
+            flag = true
+            debouncingTime = new Date().getTime()
+        }
+        return flag
+    }
+
+    $('.info-jieshao-sub-item span').click(function () {
+
+        if (!debouncingFun()) {
+            return
+        }
+
+        const index = $(this).attr('data-index')
+        const type = $(this).parents('.xdy2-content-left').attr('data-type')
+        let direction = 'sub'
+        let step = 0
+        if (index > lunbo[type].insIndex) {
+            direction = 'add'
+            step = index - lunbo[type].insIndex
+            lunbo[type].insIndex = parseInt(index)
+            slideAll($(this), type, index, direction, step)
+        }
+
+        if (index < lunbo[type].insIndex) {
+            direction = 'sub'
+            step = lunbo[type].insIndex - index
+            lunbo[type].insIndex = parseInt(index)
+            slideAll($(this), type, index, direction, step)
+        }
+    })
+
+    $('.prev').click(function () {
+        if (!debouncingFun()) {
+            return
+        }
+        const type = $(this).parents('.info-td-item').attr('data-type')
+        let index = lunbo[type].insIndex - 1
+        const length = $('[data-type=' + type + '] .info-jieshao-sub-item span').length
+
+        if (index < 0) {
+            index = length - 1
+        }
+        if (index >= length) {
+            index = 0
+        }
+
+        lunbo[type].insIndex = parseInt(index)
+
+        slideAll($(this), type, lunbo[type].insIndex, 'sub', 1)
+    })
+
+    $('.next').click(function () {
+        if (!debouncingFun()) {
+            return
+        }
+        const type = $(this).parents('.info-td-item').attr('data-type')
+        let index = lunbo[type].insIndex + 1
+        const length = $('[data-type=' + type + '] .info-jieshao-sub-item span').length
+
+        console.log(index)
+
+        if (index < 0) {
+            index = length - 1
+        }
+        if (index >= length) {
+            index = 0
+        }
+
+        lunbo[type].insIndex = parseInt(index)
+
+
+        slideAll($(this), type, lunbo[type].insIndex, 'add', 1)
+    })
+
+    function slideAll(elm, type, index, direction, step) {
+
+        lunbo[type].ins.slide(direction, step)
+        const ins1index = Math.floor(index / 5)
+        if (lunbo[type].ins1Current !== ins1index) {
+            lunbo[type].ins1Current = ins1index
+            lunbo[type].ins1.slide(ins1index)
+        }
+        $('[data-type=' + type + '] .sub-active').removeClass('sub-active')
+        $('[data-type=' + type + '] [data-index=' + index + ']').addClass('sub-active')
+    }
+
+
+</script>
+</body>
+</html>

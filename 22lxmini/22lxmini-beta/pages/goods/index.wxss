@@ -1,0 +1,57 @@
+/* pages/index0/index.wxss */
+
+.goods-item {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(187, 187, 187, 0.3);
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.goods-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  padding: 25px 0;
+  text-indent: 20px;
+}
+
+.goods-price {
+  color: #888888;
+  font-size: 14px;
+  text-align: right;
+  margin-right: 10px;
+  line-height: 16px;
+  padding: 18px 0;
+}
+
+.goods-content {
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  color: #666;
+  padding-right: -1px;
+}
+
+.gun {
+  width: 1px;
+  height: 14px;
+  background-color: #ddd;
+}
+
+.goods-service {
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.goods-service>view:first-child {
+  height: 100%;
+}
+
+.goods-service>view>view:last-child {
+  margin-top: 12px;
+  padding: 0 10px;
+}

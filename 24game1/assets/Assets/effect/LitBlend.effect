@@ -1,0 +1,99 @@
+{
+    "name": "LitBlend",
+    "shaderProperties": [
+        {
+            "key": "uAlbedoPBRFactor",
+            "type": "Float",
+            "default": [
+                1.0
+            ]
+        },
+        {
+            "key": "uEmitColorFactor",
+            "type": "Float",
+            "default": [
+                1.0
+            ]
+        },
+        {
+            "key": "uOpacityFactor",
+            "type": "Float",
+            "default": [
+                1.0
+            ]
+        },
+        {
+            "key": "uSpecularF0Factor",
+            "type": "Float",
+            "default": [
+                1.0
+            ]
+        },
+        {
+            "key": "uRoughnessPBRFactor",
+            "type": "Float",
+            "default": [
+                1.0
+            ]
+        },
+        {
+            "key": "uMetalnessPBRFactor",
+            "type": "Float",
+            "default": [
+                1.0
+            ]
+        },
+        {
+            "key": "uEnvironmentExposure",
+            "type": "Float",
+            "default": [
+                1.0
+            ]
+        },
+        {
+            "key": "_MainTex_ST",
+            "type": "Vector4",
+            "default": [
+                1,
+                1,
+                0,
+                0
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "key": "_MainTex",
+            "type": "Texture2D",
+            "default": "White"
+        },
+        {
+            "key": "_EmissionMap",
+            "type": "Texture2D",
+            "default": "Black"
+        }
+    ],
+    "defaultRenderQueue": 3000,
+    "passes": [
+        {
+            "lightMode": "ForwardBase",
+            "vs": "./LitBlend.vertex.hlsl",
+            "ps": "./LitBlend.pixel.hlsl",
+            "multiCompile": [
+            ],
+            "shaderFeatures": [],
+            "skipVariants": [],
+            "compileFlags": [
+                "Skin"
+            ],
+            "useMaterialRenderStates": true,
+            "renderStates": {
+                "blendOn": true,
+                "cullOn": false
+            }
+        }
+    ],
+    "editorInfo": {
+        "assetVersion": 2
+    }
+}

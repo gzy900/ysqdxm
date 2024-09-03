@@ -1,0 +1,154 @@
+<!--pages/index1/index.wxml-->
+<view class="container">
+  <navigation-bar></navigation-bar>
+  <image class="bg" mode="widthFix" src="/images/bg.jpg"></image>
+  <view class="body pd-28">
+    <view class="userInfo">
+      <view class="logo">
+        <image src="/images/logo.png" mode="widthFix"></image>
+
+      </view>
+      <view class="info">
+        <view style="font-size: 20px;">欢迎使用灵心心电衣预售小程序小程序小程序小程序</view>
+        <view style="margin-top: 14rpx;">邀请码：1234</view>
+        <view>已售出：1234</view>
+      </view>
+    </view>
+
+
+    <view class="loadApp">
+      <view class="loadApp-icon">
+        图标
+      </view>
+      <view class="loadApp-txt">
+        <view>您已购买本公司灵心||型心电监测产品监测产品监测产品</view>
+        <view>请前往Appstroe或应用市场进行app下载</view>
+      </view>
+    </view>
+
+    <view class="order-list">
+      <view class="order">
+        <view class="order-heard">
+          <view class="order-heard-title">我的订单</view>
+          <view class="order-heard-btn">
+            <text style="color: rgba(252, 189, 53, 1);">修改</text>
+            <text style="margin: 0 10px;">|</text>
+            <text>赠送</text>
+
+            <text style="color: rgba(153, 153, 153, 1);">信息未填写重新赠送</text>
+          </view>
+        </view>
+        <view class="order-body">
+          <view class="order-user">
+            <view class="order-user-item">
+              <view>姓名</view>
+              <view>王不悔</view>
+            </view>
+            <view class="order-user-line"></view>
+            <view class="order-user-item">
+              <view>性别</view>
+              <view>女</view>
+            </view>
+            <view class="order-user-line"></view>
+            <view class="order-user-item">
+              <view>身高</view>
+              <view>160cm</view>
+            </view>
+            <view class="order-user-line"></view>
+            <view class="order-user-item">
+              <view>体重</view>
+              <view>48kg</view>
+            </view>
+            <view class="order-user-line"></view>
+            <view class="order-user-item">
+              <view>尺码</view>
+              <view>xl</view>
+            </view>
+          </view>
+          <view class="order-info">
+            <view class="order-info-item">
+              <view>服务类型</view>
+              <view>季1度服务季度服务季度服务季度服务季度服务季度服务</view>
+            </view>
+
+            <view class="order-info-item">
+              <view>订单编号</view>
+              <view>季1度服务季度服务季度服务季度服务季度服务季度服务</view>
+            </view>
+
+            <view class="order-info-item">
+              <view>下单时间</view>
+              <view>季1度服务季度服务季度服务季度服务季度服务季度服务</view>
+            </view>
+
+            <view class="order-info-item">
+              <view>联系方式</view>
+              <view>季1度服务季度服务季度服务季度服务季度服务季度服务</view>
+            </view>
+
+            <view class="order-info-item">
+              <view>收货地址</view>
+              <view>季1度服务季度服务季度服务季度服务季度服务季度服务</view>
+            </view>
+          </view>
+
+          <!--tips-yes-->
+          <view class="order-tips tips-no">
+            <text>图标 信息不完整未激活</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="order">
+        <view class="order-heard">
+          <view class="order-heard-title">我的订单</view>
+        </view>
+        <view class="order-null">
+          <image src="/images/nullbg.png" mode="widthFix"></image>
+          <text>暂无订单信息</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="app-btn">
+      <share-element key="app-btn" transform duration="300">
+        <button class="button1" style="background: #FF9C00;">图标下单</button>
+      </share-element>
+      <view>
+        <button class="button1" style="background: #4D73EC;">图标推荐给好友</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<page-container show="{{guideShow}}" class="page-container" style="height: 100vh;">
+  <swiper class="swiper" autoplay interval='2000'>
+    <swiper-item>
+      <image mode="aspectFill" src="/images/sw2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="aspectFill" src="/images/sw2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="aspectFill" src="/images/sw2.jpg"></image>
+    </swiper-item>
+  </swiper>
+
+  <view class="setup">
+
+    <view class="setup-time">
+      <text class="setup-time-title">预售倒计时</text>
+      <text class="setup-time-time">19天12时51分25秒</text>
+      <text class="setup-time-num">已售255件</text>
+    </view>
+
+    <view class="app-btn">
+      <share-element key="app-btn" transform duration="300">
+        <button class="button1" style="background: #FF9C00;">图标下单</button>
+      </share-element>
+      <view>
+        <button class="button1" bindtap="goHome" style="background: #4D73EC;">图标个人中心</button>
+      </view>
+    </view>
+  </view>
+</page-container>

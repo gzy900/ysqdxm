@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>移视科技-关于我们</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+
+    <link href="css/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+        body {
+            overflow-y: scroll;
+        }
+
+        .about {
+            padding: 80px 0 0 0;
+        }
+
+        .about .container {
+            padding: 30px 0;
+        }
+
+        .about img {
+            width: 50%;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .about p {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .banner img {
+            width: 100%;
+        }
+
+        .about-menu p {
+            width: 278px;
+            height: 106px;
+            background: #E7EEFF;
+            color: #9DAFDA;
+            font-size: 26px;
+            line-height: 106px;
+            text-align: center;
+            margin-bottom: 24px;
+            border-right: 3px solid transparent;
+
+        }
+
+        .about-menu p:hover {
+            cursor: pointer;
+            border-right: 3px solid #3A5BA6;
+        }
+
+        .about-menu-active {
+            cursor: pointer;
+            border-right: 3px solid #3A5BA6;
+        }
+
+        .about-menu p span {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border-right: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .about-menu p:hover span {
+            border-right: 2px solid #fff;
+        }
+
+        .about-menu-active span {
+            background: #3A5BA6;
+        }
+
+        .title-icon {
+            line-height: 0;
+        }
+
+        .info-jieshao-title {
+            color: #333;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .info-jieshao-content {
+            color: #333;
+            text-align: justify;
+            font-family: PingFang SC;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px; /* 27px */
+        }
+
+        .info-jieshao-content span {
+            display: block;
+            text-indent: 18px;
+        }
+
+        .info-td {
+            width: 100%;
+            height: auto;
+            /*background-color: #E9EFFF;*/
+            position: relative;
+        }
+
+        .info-td-item {
+        }
+
+
+        .info-td-circ {
+            width: 235px;
+            height: 294px;
+            position: relative;
+            flex: none;
+        }
+
+        .info-td-round {
+            width: 500px;
+            height: 400px;
+            border-radius: 120px;
+            /*background-color: rgba(0, 0, 0, .3);*/
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            overflow: hidden;
+        }
+
+        .ren-bg {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .ren {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .layui-carousel {
+            background-color: transparent;
+        }
+
+        .layui-carousel > [carousel-item] > * {
+            background-color: transparent;
+        }
+
+        .info-jieshao-sub {
+            width: 100%;
+            height: 120px;
+        }
+
+        .info-jieshao-sub-item {
+            margin: 0 -20px;
+            overflow: hidden;
+        }
+
+        .info-jieshao-sub-item p {
+            width: 20%;
+            overflow: hidden;
+            padding: 0 20px;
+            float: left;
+            box-sizing: border-box;
+        }
+
+
+        .info-jieshao-sub-item p img {
+            width: 66%;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+
+
+        .info-jieshao-sub-item p span {
+            width: 100%;
+            display: inline-block;
+            height: auto;
+            background: #E9EFFF;
+            box-sizing: border-box;
+            text-align: center;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .sub-active {
+            border: 1px solid #7091E7;
+        }
+
+        .layui-carousel > [carousel-item]:before {
+            content: '';
+        }
+
+        .info-zs .col-lg-4 {
+            margin-bottom: 30px;
+        }
+
+        .info-times {
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .info-times-item {
+            width: 50%;
+            flex: auto;
+            padding: 0 2px;
+        }
+
+        .info-times-item-content {
+            width: 100%;
+            height: 100%;
+        }
+
+        .info-times-item-content-right .info-times-item-content-txt {
+            text-align: left;
+            padding-right: 0px;
+            padding-left: 57px;
+        }
+
+        .info-times-item-content-txt {
+            color: #666;
+            text-align: left;
+            text-indent: 18px;
+            font-family: PingFang SC;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 27px */
+            padding-right: 57px;
+            margin-top: 12px;
+        }
+
+        .info-times-item-content-img {
+            padding-right: 57px;
+            text-align: right;
+            margin-top: 40px;
+        }
+
+        .info-times-item-content-right .info-times-item-content-img {
+            text-align: left;
+            margin-top: 40px;
+
+            padding-right: 0px;
+            padding-left: 57px;
+        }
+
+        .info-times-item-content-img img {
+            width: 85%;
+        }
+
+        .info-times-item-content-title {
+            color: #2F54AE;
+            font-family: PingFang SC;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+            text-transform: uppercase;
+            vertical-align: middle;
+            text-align: right;
+            padding-right: 57px;
+            position: relative;
+        }
+
+        .info-times-item-content-right .info-times-item-content-title {
+            text-align: left;
+            padding-right: 0px;
+            padding-left: 57px;
+        }
+
+        .info-times-item-content-title span {
+            display: inline-block;
+        }
+
+        .info-times-item-content-right .time-arr {
+            left: 0;
+        }
+
+        .time-arr {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+
+        /*.info-jieshao, .info-td, .info-zs, .info-times {*/
+        /*    display: none;*/
+        /*}*/
+
+
+        .active-hide {
+            display: none;
+        }
+
+
+        .info-td-item {
+            margin-bottom: 90px;
+        }
+
+        .info-jieshao-title {
+            margin-top: 13px
+        }
+
+        .info-td-item-content, .info-jieshao-sub {
+            margin-top: 50px
+        }
+
+        .banner-txt span {
+            width: 520px;
+        }
+
+        .banner-txt .title {
+            display: block;
+            color: #FFF;
+            text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+            font-family: PingFang SC;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .banner-txt .line-dec {
+            width: 88px;
+            border-bottom: 2px solid #fff;
+            margin: 30px 0;
+        }
+
+
+        .banner-txt .container {
+            height: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .banner-txt .desc {
+            display: block;
+            color: #FFF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+        }
+
+        .info-tu {
+            width: 100%;
+            display: flex;
+            margin-top: 50px;
+        }
+
+        .info-tu div {
+            width: 20%;
+            height: 170px;
+            background-image: url("image/a_bg.svg");
+            background-size: 100% 100%;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+        }
+
+        .info-tu div p {
+            flex: none;
+        }
+
+        .info-tu div p:last-child {
+
+            width: 86%;
+            flex: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #FFF;
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .info-three {
+            margin-top: 42px;
+        }
+
+        .info-three > span {
+            display: block;
+
+            text-align: justify;
+            font-size: 18px;
+            font-style: normal;
+            line-height: 180%;
+        }
+
+        .info-three > span > span {
+            display: block;
+            color: #2F53A4;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="header-logo">
+                <!--                <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse"-->
+                <!--                        data-target="#main-nav">-->
+                <!--                    <span class="sr-only">Toggle navigation</span>-->
+                <!--                    <span class="icon-bar"></span>-->
+                <!--                    <span class="icon-bar"></span>-->
+                <!--                    <span class="icon-bar"></span>-->
+                <!--                </button>-->
+                <!--                <a href="index.html" class="navbar-brand scroll-top">-->
+                <!--                    <div class="logo">移视科技</div>-->
+                <!--                </a>-->
+                <a href="index.html">
+                </a>
+            </div>
+            <!--/.navbar-header-->
+            <div id="main-nav" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html" class="scroll-link ">主页</a></li>
+                    <li><a href="product.html" class="scroll-link" data-id="about">产品介绍</a></li>
+                    <li><a href="about.html" class="scroll-link liActive">公司介绍</a></li>
+                    <li><a href="contact.html" class="scroll-link " data-id="portfolio">联系我们</a></li>
+                    <li><a href="download.html" class="scroll-link " data-id="portfolio">下载专区</a></li>
+                    <li><a href="login.html" class="scroll-link" data-id="contact">登录</a></li>
+                </ul>
+            </div>
+            <!--/.navbar-collapse-->
+        </nav>
+        <!--/.navbar-->
+    </div>
+    <!--/.container-->
+</div>
+<!--/.header-->
+
+<div class="page-section banner">
+    <div class="banner-img">
+        <img src="image/about-banner.png"/>
+    </div>
+    <div class="banner-txt">
+        <div class="container">
+            <span class="title">关于我们</span>
+            <span class="line-dec"></span>
+            <span class="desc">上海移视网络科技有限公司，专注于心脑血管疾病领域人工智能技术的应用和开发。</span>
+        </div>
+    </div>
+</div>
+
+<div class="page-section" style="margin-top: 66px">
+    <div class="container">
+        <div class="section-heading">
+            <img src="image/gongsijieshao.svg"/>
+            <!--            <img src="image/lingdaotuandui.svg" />-->
+            <!--            <img src="image/rongyuzhengshu.svg" />-->
+            <!--            <img src="image/fazhanglicheng.svg" />-->
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 80px">
+        <div class="row">
+            <!--            <div class="col-lg-4 about-menu">-->
+            <!--                <p class="about-menu-active">-->
+            <!--                    <span>公司介绍</span>-->
+            <!--                </p>-->
+            <!--                <p>-->
+            <!--                    <span>团队介绍-->
+            <!--                    </span>-->
+            <!--                </p>-->
+            <!--                <p><span>荣誉证书-->
+            <!--                    </span></p>-->
+            <!--                <p><span>发展历程-->
+            <!--                    </span></p>-->
+            <!--            </div>-->
+
+            <div class="col-lg-12 about-content">
+                <div id="about-active-0" class="info-jieshao">
+                    <p class="title-icon">
+                        <img src="image/diandian.svg"/>
+                    </p>
+
+                    <p class="info-jieshao-title" style="margin-top: 13px">
+                        董事长说
+                    </p>
+                    <p class="info-jieshao-content" style="margin-top: 40px">
+                        <span>上海移视网络科技有限公司，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。</span>
+                        <span>公司专注于心脑血管疾病领域人工智能技术的应用和开发。</span>
+                        <span>院外依托人工智能自动预警可穿戴设备；</span>
+                        <span>院内构建人工智能预警与监控判读中心体系；</span>
+                        <span>联合知名三甲医疗机构，为心脑血管疾病患者、心脏康复人群、亚健康人群，提供全生命周期数据挖掘和风险评估的远程医疗健康管理服务。</span>
+                        <span>先后参与上海市三年行动计划与国家科技部重点研发973项目（课题编号：2017YFC0111802），建立了院外实时预警心电系统，首创了院间心血管信息管理移动平台。</span>
+                        <span>通过云数据服务，AI算法，居家与诊疗环境下的可穿戴设备，形成院前预警，院间联动，院后监护的全周期健康解决方案。</span>
+                        <span>公司是由美国GE公司Healthcare中国区医疗药代动力学研究中心（Pharmacokinetics Research Centre - PKRC）创始人、GE药业精准医学学院(Institute of Precision Medicine - IPM)创始人协技术团队一同创立的。所在团队共同研究发表87篇SCI，影响因子 231.6（截至2020年5月）。个人co-author文章23篇SCI，影响因子70.4（截至2020年5月）。内容研究涉及心血管，神经，肿瘤，肝脏，骨肌等医学影像诊断、临床路径指导及人工智能领域。</span>
+                        <span>公司心电数据处理算法是基于2020年4月于International Journal of Cardiology发表的急性心肌梗死自动预警研究Early detection of ST-segment elevated myocardial infarction by artificial intelligence with 12-lead electrocardiogram注册ALERT临床研究（NCT03317691），并获得美国加州洛杉矶分校Ivan Rokos教授同期述评称这是人工智能算法助力急性心肌梗死救治自动预警系统的“Shanghai Algorithm”；并获得十二导联心电领域前三个CNN卷积神经网络算法的“基于CNN神经网络的急性心肌梗死定性（ZL 201810835499.6）、定时期（ZL 201810839194.2）、定位（ZL 201810837033.X）自动判别系统”3个AI发明专利；心肌梗死心电图数据训练及标注基础基于上海第十人民医院，上海长海医院，上海中山医院三家三甲医院及其若干医联体医院的10年内患急性心肌梗死患者，且所有数据包含每个患者后期DSA血管造影数据作为金标准进行对照。数据入组、收集及标注方法唯一并先进。且于数据中心建立算法训练后台，在产品应用过程中可不断迭代。2019年8月在法国巴黎，应用入围ESC2019全球五大医疗+AI应用，并在决赛角逐中荣获全球总决赛第二名；2019年在以色列特拉维夫的世界心血管创新大会上口头演讲，基于可穿戴心电监测设备+人工智能算法的心肌梗死预警系统。</span>
+                        <span>国内首创基于信息融合技术的“移动、标准”院际急性心梗救治网络。针对区域间医疗不平衡，首次在移动端实现院间不同制式医学影像设备多模态融合，利用数据迁移算法和远线存储技术建立标准化，移动化，脱敏化的心血管数据处理和信息管理系统。该移动PACS2.0系统已获医疗器械注册证（沪械注准20202210584）。通过非失真压缩技术将原始医疗数据无损的实时调阅，跨时间、地域传输，形成AI算法所需数据的清洗、标注、建模、统计平台，实现手术示教、转播，远程会诊等方案，并完成上海-巴黎、上海-摩洛哥等5G场景手术直播。应用于40家区域内医疗中心，提高区域内心梗救治水平。该技术支持合作医院获中华医学科技进步二等奖。</span>
+                        <span>在医疗器械产品注册端，目前第2个产品动态心电血压血氧工作站已在医疗器械检测所检验，预期2021年Q3获得医疗器械注册证；第3个产品十二导联无感电极心电衣（动态心电图记录器）将于2021年Q4获得医疗器械注册证。</span>
+                        <span>知识产权方面，目前已拥有发明专利3项，实用新型专利1项，软件著作权证12项；5项发明专利进入实质审核阶段。</span>
+                        <span>2019年-2020年获得科技型中小企业入库编号，2021年已完成申报；2019-2020年连续2年获得上海市科委创新基金项目立项暨“第八届/第九届创业在上海”上海市优胜企业奖 并于2019年入围电子信息行业全国总决赛并获得优胜奖；2019年11月获得青浦区第四届创业大赛一等奖。</span>
+                        <span style="margin-top: 20px">围绕心肌梗死、猝死、心脏压力、缺血性脑卒中等病种，通过人工智能分析预警系统、诊疗与居家场景下的智能医疗器械与医疗服务平台，进行以病种为中心的<span1 style="color:#2F53A4;font-weight: bold ">心血管疾病早期饰查、国手术期监测、术后康复和慢病管理等领域</span1>的风险评估和健康管理。</span>
+                    </p>
+                </div>
+
+                <div class="info-tu">
+                    <div>
+                        <p style="text-align: center;padding-top: 31px">
+                            <img src="image/a_t1.svg"/>
+                        </p>
+                        <p style="display: flex">
+                            <span>
+                                国家高新技术企业 <br/> 2015年11月成立
+                            </span>
+                        </p>
+                    </div>
+                    <div>
+                        <p style="text-align: center;padding-top: 31px">
+                            <img src="image/a_t2.svg"/>
+                        </p>
+                        <p style="display: flex">
+                            <span>
+                                员工35+ 研发60%
+                            </span>
+                        </p>
+                    </div>
+                    <div>
+                        <p style="text-align: center;padding-top: 31px">
+                            <img src="image/a_t3.svg"/>
+                        </p>
+                        <p style="display: flex">
+                            <span>
+                                上海嘉定1000㎡ 研发中心、国之名医工作室、医工结合研究所
+                            </span>
+                        </p>
+                    </div>
+                    <div>
+                        <p style="text-align: center;padding-top: 31px">
+                            <img src="image/a_t4.svg"/>
+                        </p>
+                        <p style="display: flex">
+                            <span>
+                                医疗器械生产资质
+                            </span>
+                        </p>
+                    </div>
+                    <div>
+                        <p style="text-align: center;padding-top: 31px">
+                            <img src="image/a_t5.svg"/>
+                        </p>
+                        <p style="display: flex">
+                            <span>
+                                心血管疾病诊断 <br/>大模型在研
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-three">
+                    <span><span>企业使命：</span>聚焦心梗及其他心血管疾病问题，运用AI进行技术服务与智能医疗器械的创新，提供便捷的院内外心脏疾病筛查、预警及康复管理解决方案。</span>
+                    <span><span>企业愿景：</span>成为中国第一梯队的心血管数字医疗健康综合数字服务品牌。</span>
+                    <span><span>企业价值观：</span>知行合一，守护心脏，守护家庭，守护爱。</span>
+                </div>
+
+                <div id="about-active-1" class="info-td active-hide">
+                    <div class="info-td-item" data-type="ld">
+                        <p class="title-icon">
+                            <img src="image/diandian.svg"/>
+                        </p>
+
+                        <p class="info-jieshao-title" style="">
+                            领导团队
+                        </p>
+
+                        <div style="" class="info-td-item-content layui-carousel" id="lunboid_ld">
+                            <div carousel-item>
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇0</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇1</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇2</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇3</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇4</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇5</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇6</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇7</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div style="" class="info-jieshao-sub layui-carousel" id="lunboidsub_ld">
+                            <p class="prev"
+                               style="width: 25px;height: 25px;position: absolute;top: 46px;left: -40px;cursor: pointer;background-image: url('image/left.svg')"></p>
+                            <p class="next"
+                               style="width: 25px;height: 25px;position: absolute;top: 46px;right: -40px;cursor: pointer;background-image: url('image/right.svg')"></p>
+                            <div carousel-item>
+                                <div>
+                                    <div class="info-jieshao-sub-item">
+                                        <p>
+                                            <span class="sub-active" data-index="0">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="1">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="2">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="3">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="4">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="info-jieshao-sub-item">
+                                        <p>
+                                            <span class="sub-active" data-index="5">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="6">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="7">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-td-item" data-type="js">
+                        <p class="title-icon">
+                            <img src="image/diandian.svg"/>
+                        </p>
+
+                        <p class="info-jieshao-title">
+                            技术团队
+                        </p>
+
+                        <div class="info-td-item-content layui-carousel" id="lunboid_js">
+                            <div carousel-item>
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇0</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇1</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇2</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇3</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇4</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇5</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇6</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇7</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="info-jieshao-sub layui-carousel" id="lunboidsub_js">
+                            <p class="prev"
+                               style="width: 25px;height: 25px;position: absolute;top: 46px;left: -40px;cursor: pointer;background-image: url('image/left.svg')"></p>
+                            <p class="next"
+                               style="width: 25px;height: 25px;position: absolute;top: 46px;right: -40px;cursor: pointer;background-image: url('image/right.svg')"></p>
+                            <div carousel-item>
+                                <div>
+                                    <div class="info-jieshao-sub-item">
+                                        <p>
+                                            <span class="sub-active" data-index="0">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="1">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="2">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="3">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="4">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="info-jieshao-sub-item">
+                                        <p>
+                                            <span class="sub-active" data-index="5">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="6">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="7">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-td-item" data-type="sh">
+                        <p class="title-icon">
+                            <img src="image/diandian.svg"/>
+                        </p>
+
+                        <p class="info-jieshao-title">
+                            售后团队
+                        </p>
+
+                        <div class="info-td-item-content layui-carousel" id="lunboid_sh">
+                            <div carousel-item>
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇0</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇1</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇2</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇3</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇4</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇5</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇6</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇7</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="info-jieshao-sub layui-carousel" id="lunboidsub_sh">
+                            <p class="prev"
+                               style="width: 25px;height: 25px;position: absolute;top: 46px;left: -40px;cursor: pointer;background-image: url('image/left.svg')"></p>
+                            <p class="next"
+                               style="width: 25px;height: 25px;position: absolute;top: 46px;right: -40px;cursor: pointer;background-image: url('image/right.svg')"></p>
+                            <div carousel-item>
+                                <div>
+                                    <div class="info-jieshao-sub-item">
+                                        <p>
+                                            <span class="sub-active" data-index="0">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="1">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="2">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="3">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="4">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="info-jieshao-sub-item">
+                                        <p>
+                                            <span class="sub-active" data-index="5">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="6">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="7">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-td-item" data-type="ys">
+                        <p class="title-icon">
+                            <img src="image/diandian.svg"/>
+                        </p>
+
+                        <p class="info-jieshao-title">
+                            医生团队
+                        </p>
+
+                        <div class="info-td-item-content layui-carousel" id="lunboid_ys">
+                            <div carousel-item>
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇0</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇1</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇2</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇3</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇4</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇5</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇6</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="info-td-item-content-item">
+                                        <div class="info-td-circ">
+                                            <div class="info-td-round">
+                                                <img class="ren-bg" src="image/renbg.svg"/>
+                                                <img class="ren" src="image/ren.svg"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-td-item-content-info">
+                                            <p class="info-td-name">徐潇7</p>
+                                            <p class="info-td-title">创始人 首席执行官</p>
+                                            <p class="info-td-desc">
+                                                这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="info-jieshao-sub layui-carousel" id="lunboidsub_ys">
+                            <p class="prev"
+                               style="width: 25px;height: 25px;position: absolute;top: 46px;left: -40px;cursor: pointer;background-image: url('image/left.svg')"></p>
+                            <p class="next"
+                               style="width: 25px;height: 25px;position: absolute;top: 46px;right: -40px;cursor: pointer;background-image: url('image/right.svg')"></p>
+                            <div carousel-item>
+                                <div>
+                                    <div class="info-jieshao-sub-item">
+                                        <p>
+                                            <span class="sub-active" data-index="0">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="1">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="2">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="3">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="4">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="info-jieshao-sub-item">
+                                        <p>
+                                            <span class="sub-active" data-index="5">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="6">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <span data-index="7">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="about-active-2" class="info-zs" style="margin-top: 80px">
+
+                    <p class="title-icon">
+                        <img src="image/diandian.svg"/>
+                    </p>
+
+                    <p class="info-jieshao-title" style="margin-top: 13px">
+                        荣誉证书
+                    </p>
+
+                    <div class="row" style="margin-top: 24px">
+                        <div class="col-lg-3">
+                            <img src="image/a_s1.svg"/>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="image/a_s2.svg"/>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="image/a_s3.svg"/>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="image/a_s4.svg"/>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <p class="title-icon" style="margin-top: 80px">
+                    <img src="image/diandian.svg"/>
+                </p>
+
+                <p class="info-jieshao-title" style="margin-top: 13px;ma">
+                    发展历程
+                </p>
+
+                <div id="about-active-3" class="info-times" style="margin-top: 80px">
+
+                    <div class="info-times-item">
+                        <div class="info-times-item-content" style="border-right:2px solid #2F54AE;">
+                            <div class="info-times-item-content-title">
+                                <img src="image/time-left.svg"/>
+                                <span>2015</span>
+                                <br/>
+                                <span style="margin-top: 10px">公司成立</span>
+
+                                <img src="image/time-left-arr.svg" class="time-arr"/>
+                            </div>
+
+                            <div class="info-times-item-content-txt">
+                                上海移视网络科技有限公司，成立于2015年，于2019年获得高新技术企业认。公司专注于心脑血管疾病领域人工智能技术的应用和开发。
+                            </div>
+
+                            <div class="info-times-item-content-img">
+                                <img src="image/time-img-left1.png"/>
+                            </div>
+
+
+                            <div class="info-times-item-content-title" style="margin-top: 60px">
+                                <img src="image/time-left.svg"/>
+                                <span>2015</span>
+                                <br/>
+                                <span style="margin-top: 10px">获得入库编号</span>
+
+                                <img src="image/time-left-arr.svg" class="time-arr"/>
+                            </div>
+
+                            <div class="info-times-item-content-txt">
+                                2019年-2020年获得科技型中小企业入库编号，2021年已完成申报。
+                            </div>
+
+                            <div class="info-times-item-content-img">
+                                <img src="image/lc.svg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-times-item">
+                        <div class="info-times-item-content info-times-item-content-right"
+                             style="border-left:2px solid #2F54AE;">
+
+                            <div class="info-times-item-content-img" style="padding-top: 80px;margin-top: 0">
+                                <img src="image/logo.svg"/>
+                            </div>
+
+                            <div class="info-times-item-content-title" style="margin-top: 100px">
+                                <img src="image/time-right.svg"/>
+                                <span>2019</span>
+                                <br/>
+                                <span style="margin-top: 10px">参与国外大赛</span>
+
+                                <img src="image/time-right-arr.svg" class="time-arr"/>
+                            </div>
+
+                            <div class="info-times-item-content-txt">
+                                2019年8月在法国巴黎，应用入围ESC2019全球五大医疗+AI应用，并在决赛角逐中荣获全球总决赛第二名；同年在以色列特拉维夫的世界心血管创新大会上口头演讲，基于可穿戴心电监测设备+人工智能算法的心肌梗死预警系统。
+                            </div>
+
+
+                            <div class="info-times-item-content-img">
+                                <img src="image/lc.svg"/>
+                            </div>
+
+                            <div class="info-times-item-content-title" style="margin-top: 100px">
+                                <img src="image/time-right.svg"/>
+                                <span>2015</span>
+                                <br/>
+                                <span style="margin-top: 10px">公司成立</span>
+
+                                <img src="image/time-right-arr.svg" class="time-arr"/>
+                            </div>
+
+                            <div class="info-times-item-content-txt">
+                                2019年-2020年获得科技型中小企业入库编号，2021年已完成申报。
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="font-content" style="font-size: 18px;">
+            <div class="font-content-left">
+                <p class="font-content-left-top">
+                    Copyright © 2020 Company Name - Design: 移视科技 - Collect from 移视科技
+                </p>
+                <p>上海移视网络科技有限公司 </p>
+                <p>备案号：沪ICP备18036487号-3</p>
+            </div>
+            <div class="">
+                <p>商务合作</p>
+                <p class="font-mail">邮箱：yishi@mvtech.cc</p>
+                <p>联系人：高梓桓</p>
+                <p>手机号：13795384843</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
+
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.7.0.min.js"><\/script>')</script>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/plugins.js"></script>
+<script src="js/drug-list.js"></script>
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+    layui.use('dropdown', function () {
+        var dropdown = layui.dropdown
+        dropdown.render({
+            elem: '#user',
+            data: [{
+                title: '退出登录'
+                , id: 100
+                , href: '#'
+            }]
+            , id: 'demo1'
+            //菜单被点击的事件
+            , click: function (obj) {
+                if (obj.id == 100) {
+                    localStorage.removeItem('username')
+                    location.href = "login.html"
+                }
+            }
+        });
+    });
+
+    if (localStorage.getItem('username')) {
+        $('.username').show()
+        $("#username").text(localStorage.getItem('username'))
+        $('.goSign').hide()
+    } else {
+        $('.username').hide()
+        $('.goSign').show()
+    }
+
+    $('.about-menu p').click(function () {
+        $('.about-menu-active').removeClass('about-menu-active')
+        $(this).addClass('about-menu-active')
+
+        $('.about-content>div').addClass('active-hide')
+        $('#about-active-' + $(this).index()).removeClass('active-hide')
+    })
+
+
+    const lunbo = {
+        ld: {
+            ins: null,
+            ins1: null,
+            insIndex: 0,
+            ins1Current: 0
+        },
+        js: {
+            ins: null,
+            ins1: null,
+            insIndex: 0,
+            ins1Current: 0
+        },
+        sh: {
+            ins: null,
+            ins1: null,
+            insIndex: 0,
+            ins1Current: 0
+        },
+        ys: {
+            ins: null,
+            ins1: null,
+            insIndex: 0,
+            ins1Current: 0
+        },
+    }
+    layui.use('carousel', function () {
+        var carousel = layui.carousel;
+        //建造实例
+
+        for (const item in lunbo) {
+            lunbo[item].ins = carousel.render({
+                elem: '#lunboid_' + item
+                , width: '100%' //设置容器宽度
+                , height: '294px' //设置容器宽度
+                , arrow: 'none' //始终显示箭头
+                , autoplay: false
+                , indicator: 'none'
+                //,anim: 'updown' //切换动画方式
+            });
+
+            lunbo[item].ins1 = carousel.render({
+                elem: '#lunboidsub_' + item
+                , width: '100%' //设置容器宽度
+                , height: '120px' //设置容器宽度
+                , arrow: 'none' //始终显示箭头
+                , autoplay: false
+                , indicator: 'none'
+                //,anim: 'updown' //切换动画方式
+            });
+        }
+
+        console.log(lunbo.ld.ins)
+    });
+
+
+    let debouncingTime = 0
+
+    function debouncingFun() {
+        let flag = false
+        if (new Date().getTime() - debouncingTime > 500) {
+            flag = true
+            debouncingTime = new Date().getTime()
+        }
+        return flag
+    }
+
+    $('.info-jieshao-sub-item span').click(function () {
+
+        if (!debouncingFun()) {
+            return
+        }
+
+        const index = $(this).attr('data-index')
+        const type = $(this).parents('.info-td-item').attr('data-type')
+        let direction = 'sub'
+        let step = 0
+        if (index > lunbo[type].insIndex) {
+            direction = 'add'
+            step = index - lunbo[type].insIndex
+            lunbo[type].insIndex = parseInt(index)
+            slideAll($(this), type, index, direction, step)
+        }
+
+        if (index < lunbo[type].insIndex) {
+            direction = 'sub'
+            step = lunbo[type].insIndex - index
+            lunbo[type].insIndex = parseInt(index)
+            slideAll($(this), type, index, direction, step)
+        }
+    })
+
+    $('.prev').click(function () {
+        if (!debouncingFun()) {
+            return
+        }
+        const type = $(this).parents('.info-td-item').attr('data-type')
+        let index = lunbo[type].insIndex - 1
+        const length = $('[data-type=' + type + '] .info-jieshao-sub-item span').length
+
+        if (index < 0) {
+            index = length - 1
+        }
+        if (index >= length) {
+            index = 0
+        }
+
+        lunbo[type].insIndex = parseInt(index)
+
+        slideAll($(this), type, lunbo[type].insIndex, 'sub', 1)
+    })
+
+    $('.next').click(function () {
+        if (!debouncingFun()) {
+            return
+        }
+        const type = $(this).parents('.info-td-item').attr('data-type')
+        let index = lunbo[type].insIndex + 1
+        const length = $('[data-type=' + type + '] .info-jieshao-sub-item span').length
+
+        console.log(index)
+
+        if (index < 0) {
+            index = length - 1
+        }
+        if (index >= length) {
+            index = 0
+        }
+
+        lunbo[type].insIndex = parseInt(index)
+
+
+        slideAll($(this), type, lunbo[type].insIndex, 'add', 1)
+    })
+
+    function slideAll(elm, type, index, direction, step) {
+
+        lunbo[type].ins.slide(direction, step)
+        const ins1index = Math.floor(index / 5)
+        if (lunbo[type].ins1Current !== ins1index) {
+            lunbo[type].ins1Current = ins1index
+            lunbo[type].ins1.slide(ins1index)
+        }
+        $('[data-type=' + type + '] .sub-active').removeClass('sub-active')
+        $('[data-type=' + type + '] [data-index=' + index + ']').addClass('sub-active')
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

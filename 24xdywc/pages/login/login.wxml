@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class="body">
+  <navigation-bar style="flex: none;" model:defaultData="{{ {title:'登录'} }}" model:scrollTop="{{ 100 }}"></navigation-bar>
+  <view style="flex: auto;" class="bg">
+    <view style="display: flex;flex-direction: column;align-items: center;">
+      <image style="width: 100px;" src="/image/logo.svg"></image>
+      <button class="button primary">微信授权登录</button>
+      <button class="button whiteBtn">新手机号注册</button>
+      <checkbox style="width: 90%;font-size: 14px;">
+        已阅读并同意《平台使用协议》和《平台隐私政策》
+      </checkbox>
+    </view>
+  </view>
+</view>

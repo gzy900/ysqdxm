@@ -1,0 +1,25 @@
+/* pages/pay/index.wxss */
+
+.jiao {
+  width: 100%;
+  height: 400px;
+  /* background-color: #000; */
+  margin-top: 100px;
+  /* border-radius: 20px; */
+  filter: drop-shadow(0 0 8px red);
+
+  mask-image: url(/images//nullbg.png);
+  mask-composite: subtract;
+  overflow: hidden;
+}
+
+.jiao:after {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 120px;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 0px 0px 2000px #000;
+}

@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>移视科技-主页</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+
+        .info-jieshao-sub-item p span {
+            border: 1px solid #E2E2E2;
+        }
+
+        .info-jieshao-sub-item p .sub-active {
+            border: 1px solid #7091E7;
+        }
+
+        .content-item {
+            width: 100%;
+        }
+
+        .lx-app {
+            overflow: hidden;
+            position: relative;
+            margin-top: 70px;
+        }
+
+        .lx-app .lx-app-bg {
+            float: right;
+        }
+
+        .lx-app-item {
+            display: flex;
+            margin-bottom: 15px;
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .lx-app-item span {
+            line-height: 24px;
+        }
+
+
+        .lx-app-item span img {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .xdy2 .title {
+            color: #2F54AE;
+            font-family: PingFang SC;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .xdy2-content {
+            overflow: hidden;
+        }
+
+        .xdy2-content-left {
+            width: 670px;
+            float: left;
+        }
+
+        .xdy2-content-right {
+            float: right;
+            width: 441px;
+        }
+
+        .xdy2-content-right .right-title {
+            color: #666;
+            font-family: PingFang SC;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-top: 45px;
+        }
+
+        .xdy2-content-right .right-content {
+            color: #333;
+            text-align: justify;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+            margin-top: 20px;
+        }
+
+        .info-jieshao-sub-item p {
+            width: 25%;
+        }
+
+        .xdy1 {
+            overflow: hidden;
+        }
+
+        .xdy1 .xdy1-left {
+            width: 460px;
+            float: left;
+        }
+
+        .xdy1 .xdy1-desc {
+            color: #333;
+            text-align: justify;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+        }
+
+        .xdy1 .xdy1-right {
+            width: 660px;
+            float: right;
+        }
+
+        .xdy1-img {
+            overflow: hidden;
+        }
+
+        .xdy1-img img {
+            width: 20%;
+            float: left;
+        }
+
+        .dongtaipc {
+            overflow: hidden;
+        }
+
+        .dtpc-left {
+            width: 530px;
+            float: left;
+        }
+
+        .dtpc-right {
+            width: 520px;
+            float: right;
+        }
+
+        .dtpc-left .title {
+            color: #2F54AE;
+            font-family: PingFang SC;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .dtpc-left .desc {
+            color: #333;
+            text-align: justify;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+        }
+
+        .xzayd {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .xzayd .lx-app-bg {
+            width: 1054px;
+            float: right;
+        }
+
+        .xzayd-title {
+            color: #2F54AE;
+            font-family: PingFang SC;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .xzayd .xzayd-title {
+            color: #2F54AE;
+            font-family: PingFang SC;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .xzayd .xzayd-desc {
+            color: #333;
+            text-align: justify;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+        }
+
+        .mesh {
+            overflow: hidden;
+        }
+
+        .mesh .mesh-left {
+            width: 600px;
+            float: left;
+        }
+
+        .mesh .mesh-right {
+            width: 500px;
+            float: right;
+        }
+
+        .mesh-desc {
+            color: #333;
+            text-align: justify;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 30px */
+            text-indent: 20px;
+        }
+
+        .mesh-title {
+            display: flex;
+            color: #333;
+            font-family: PingFang SC;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+            align-items: center;
+        }
+
+        .mesh-title span {
+            margin-left: 25px;
+            white-space: nowrap;
+
+        }
+
+        .wxxdjcy {
+        }
+
+        .wxxdjcy-title {
+            color: #2F54AE;
+            font-family: PingFang SC;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-top: 70px;
+        }
+
+        .wxxdjcy-body {
+            margin: 0 -10px;
+            overflow: hidden;
+        }
+
+        .wxxdjcy-body > div {
+            display: inline-block;
+            width: 33.3%;
+            padding: 0 10px;
+            float: left;
+        }
+
+        .wxxdjcy-body > div > p {
+            color: #333;
+            font-family: PingFang TC;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            height: 30px;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+
+        .wxxdjcy-body > div > div {
+            width: 100%;
+            height: 329px;
+            border: 1px solid #E2E2E2;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 30px 30px 30px;
+        }
+
+        .wxxdjcy-body > div > div > span {
+            min-height: 20px;
+            line-height: 20px;
+            color: #BBB;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .wxxdjcy-body > div > div > .img {
+            flex: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ccu-body {
+            height: 372px;
+            margin: 0 -10px;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .ccu-body-left {
+            width: 40%;
+            margin: -10px 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .ccu-body-left > div {
+            height: 50%;
+            padding: 10px 0;
+        }
+
+        .ccu-body-left > div > div {
+            height: 100%;
+            border: 1px solid rgba(226, 226, 226, 1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ccu-body-right {
+            width: 60%;
+            height: 100%;
+            padding: 0 10px;
+            float: left;
+        }
+
+        .ccu-body-right div {
+            height: 100%;
+            border: 1px solid rgba(226, 226, 226, 1);
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cd-hero-slider li:first-of-type {
+            background-image: url("image/pd-1.png");
+        }
+
+        .cd-hero-slider li:nth-of-type(2) {
+            background-image: url("image/pd-1.png");
+        }
+
+        .cd-hero-slider li:nth-of-type(3) {
+            background-image: url("image/pd-1.png");
+        }
+
+        .banner-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .banner-content p {
+            margin: 0;
+            margin-top: 15px;
+
+        }
+
+        .banner-content p:first-child {
+            color: #000F33;
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .banner-content p:nth-of-type(2) {
+            color: #1D263A;
+            font-family: PingFang SC;
+            font-size: 52px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .banner-content p:nth-of-type(3) {
+            color: #444;
+            font-family: PingFang SC;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .banner-content p:nth-of-type(4) {
+            color: #444;
+            font-family: PingFang SC;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .banner-content p:nth-of-type(5) {
+            margin-top: 100px;
+        }
+
+        .info-jieshao-sub-item p span {
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-jieshao-sub-item p img {
+            width: auto;
+            margin-top: 0;
+        }
+
+        .info-td-item-content-item {
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .product-title {
+            display: flex;
+            background-color: #E7EEFF;
+        }
+
+        .product-title a {
+            flex: auto;
+            cursor: pointer;
+            height: 47px;
+            line-height: 47px;
+            text-align: center;
+            color: #9DAFDA;
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .product-title a:hover {
+            background-color: #C9D9FF;
+            color: #2F54AE;
+            font-weight: bold;
+        }
+
+        .product-title a.active {
+            background-color: #C9D9FF;
+            color: #2F54AE;
+            font-weight: bold;
+        }
+
+        .xdy1-item {
+            width: 100%;
+            height: 240px;
+            border: 2px solid #2F54AE;
+            border-radius: 15px;
+        }
+
+        .xdy1-item-1 {
+            background-color: #f2f2f2;
+            width: 99px;
+            height: 99px;
+            border-radius: 50%;
+            margin: -51px auto;
+        }
+
+        .xdy1-item-1-1 {
+            width: 77px;
+            height: 77px;
+            margin: 11px auto;
+            background-color: #2F54AE;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .xdy1-item-2 {
+            color: #333;
+            font-family: "PingFang SC";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+
+        .xdy1-item-3 {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .xdy1-item-3-1 {
+
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="header-logo">
+                <!--                <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse"-->
+                <!--                        data-target="#main-nav">-->
+                <!--                    <span class="sr-only">Toggle navigation</span>-->
+                <!--                    <span class="icon-bar"></span>-->
+                <!--                    <span class="icon-bar"></span>-->
+                <!--                    <span class="icon-bar"></span>-->
+                <!--                </button>-->
+                <!--                <a href="index.html" class="navbar-brand scroll-top">-->
+                <!--                    <div class="logo">移视科技</div>-->
+                <!--                </a>-->
+                <a href="index.html">
+                </a>
+            </div>
+            <!--/.navbar-header-->
+            <div id="main-nav" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html" class="scroll-link ">主页</a></li>
+                    <li><a href="product.html" class="scroll-link liActive" data-id="about">产品介绍</a></li>
+                    <li><a href="about.html">公司介绍</a></li>
+                    <li><a href="contact.html" class="scroll-link " data-id="portfolio">联系我们</a></li>
+                    <li><a href="download.html" class="scroll-link " data-id="portfolio">下载专区</a></li>
+                    <li><a href="login.html" class="scroll-link" data-id="contact">登录</a></li>
+                </ul>
+            </div>
+            <!--/.navbar-collapse-->
+        </nav>
+        <!--/.navbar-->
+    </div>
+    <!--/.container-->
+</div>
+<!--/.header-->
+<section class="cd-hero">
+    <ul class="cd-hero-slider autoplay">
+        <!--
+            <ul class="cd-hero-slider autoplay"> for slider auto play
+            <ul class="cd-hero-slider"> for disabled auto play
+        -->
+        <li class="selected first-slide">
+            <div class="container banner-content" style="height: 100%;">
+                <p>随时监控您的身体健康</p>
+                <p>动态心电图记录器</p>
+                <p>人工智能算法</p>
+                <p>信息化建设</p>
+                <p>
+                    <a href="#edxdy">
+                        <button class="layui-btn layui-btn-radius" style="color: #13386C;background-color: #fff;">了解更多</button>
+                    </a>
+                </p>
+            </div>
+        </li>
+
+        <!--        <li class="second-slide">-->
+        <!--            <div class="container banner-content" style="height: 100%;">-->
+        <!--                <p>随时监控您的身体健康</p>-->
+        <!--                <p>动态心电图记录器</p>-->
+        <!--                <p>人工智能算法</p>-->
+        <!--                <p>信息化建设</p>-->
+        <!--                <p>-->
+        <!--                    <button class="layui-btn layui-btn-radius" style="color: #13386C;background-color: #fff;">了解更多</button>-->
+        <!--                </p>-->
+        <!--            </div>-->
+        <!--        </li>-->
+
+        <!--        <li class="third-slide">-->
+        <!--            <div class="container banner-content" style="height: 100%;">-->
+        <!--                <p>随时监控您的身体健康</p>-->
+        <!--                <p>动态心电图记录器</p>-->
+        <!--                <p>人工智能算法</p>-->
+        <!--                <p>信息化建设</p>-->
+        <!--                <p>-->
+        <!--                    <button class="layui-btn layui-btn-radius" style="color: #13386C;background-color: #fff;">了解更多</button>-->
+        <!--                </p>-->
+        <!--            </div>-->
+        <!--        </li>-->
+
+    </ul> <!-- .cd-hero-slider -->
+
+    <div class="cd-slider-nav">
+        <nav>
+            <span class="cd-marker item-1"></span>
+
+            <ul>
+                <li class="selected"><a href="#0"></a></li>
+                <li><a href="#0"></a></li>
+                <li><a href="#0"></a></li>
+            </ul>
+        </nav>
+    </div> <!-- .cd-slider-nav -->
+</section> <!-- .cd-hero -->
+
+<div class="page-section product-title">
+
+    <a href="#xdy1" class="active">一代心电衣</a>
+    <a href="#mexdyapp">脉迩心电衣APP</a>
+    <a href="#edxdy">二代心电衣</a>
+    <a href="#lxapp">灵心APP</a>
+    <a href="#xzaydapp">心脏爱运动APP</a>
+    <a href="#meshapp">脉迩生活</a>
+    <a href="#wxxdjcy">无线心电检测仪</a>
+    <a href="#ydccu">移动CCU</a>
+
+
+</div>
+
+<div class="page-section">
+    <div class="container">
+
+        <!--        十二导联无感电极心电衣（一代）-->
+        <div id="xdy1" class="content-item xdy1" style="margin-top: 70px">
+            <div>
+                <p class="title-icon">
+                    <img src="image/diandian.svg"/>
+                </p>
+                <p class="info-jieshao-title" style="margin-top: 13px">
+                    十二导联无感电极心电衣（一代）
+                </p>
+            </div>
+            <div style="text-align: center;margin-top: 60px">
+                <img src="image/2bg.svg"/>
+            </div>
+
+            <div class="row" style="margin-top: 60px">
+                <div class="col-lg-4">
+                    <div class="xdy1-item">
+                        <p class="xdy1-item-1">
+                            <span class="xdy1-item-1-1">
+                                <img src="image/x1.svg"/>
+                            </span>
+                        </p>
+
+
+                        <p class="xdy1-item-2">临床标准</p>
+                        <div class="xdy1-item-3">
+                            <div class="xdy1-item-3-1">
+                                <p class="lx-app-item" style="margin-top: 20px">
+                            <span>
+                                <img src="image/xin.svg"/>
+                            </span>
+                                    <span>12导联动态心电数据采集标准 </span>
+                                </p>
+                                <p class="lx-app-item" style="margin-top: 20px">
+                            <span>
+                                <img src="image/xin.svg"/>
+                            </span>
+                                    <span>满足临床医生诊断需求</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="xdy1-item">
+                        <p class="xdy1-item-1">
+                            <span class="xdy1-item-1-1">
+                                <img src="image/x2.svg"/>
+                            </span>
+                        </p>
+
+
+                        <p class="xdy1-item-2">长程保护</p>
+                        <div class="xdy1-item-3">
+                            <div class="xdy1-item-3-1">
+                                <p class="lx-app-item" style="margin-top: 20px">
+                            <span>
+                                <img src="image/xin.svg"/>
+                            </span>
+                                    <span>柔软且亲肤、多尺码选择 </span>
+                                </p>
+                                <p class="lx-app-item" style="margin-top: 20px">
+                            <span>
+                                <img src="image/xin.svg"/>
+                            </span>
+                                    <span>拉扯不变形、可多次洗涤</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="xdy1-item">
+                        <p class="xdy1-item-1">
+                            <span class="xdy1-item-1-1">
+                                <img src="image/x3.svg"/>
+                            </span>
+                        </p>
+                        <p class="xdy1-item-2">临床标准</p>
+                        <div class="xdy1-item-3">
+                            <div class="xdy1-item-3-1">
+                                <p class="lx-app-item" style="margin-top: 20px">
+                            <span>
+                                <img src="image/xin.svg"/>
+                            </span>
+                                    <span>24小时动态监测</span>
+                                </p>
+                                <p class="lx-app-item" style="margin-top: 20px">
+                            <span>
+                                <img src="image/xin.svg"/>
+                            </span>
+                                    <span>AI智能分析预警</span>
+                                </p>
+                                <p class="lx-app-item" style="margin-top: 20px">
+                            <span>
+                                <img src="image/xin.svg"/>
+                            </span>
+                                    <span>三甲医院分析报告</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        脉迩心电衣app-->
+        <div id="mexdyapp" class="content-item xdy1" style="margin-top: 70px">
+            <div class="xdy1-left" style="padding-top: 66px">
+                <p class="title-icon">
+                    <img src="image/diandian.svg"/>
+                </p>
+                <p class="info-jieshao-title" style="margin-top: 13px">
+                    脉迩心电衣app
+                </p>
+                <p class="xdy1-desc" style="margin-top: 55px">
+                    有关心电衣的介绍，软件操作方便，功能多样。用于各级医院、诊所、疾控中心、临床检验中心、卫生保健中心、急救站、护理站等医疗卫生机构、救护车等 用于心脏结构早期诊断人群。
+                </p>
+            </div>
+            <div class="xdy1-right">
+                <img src="image/xdy1-bg.svg"/>
+            </div>
+        </div>
+
+        <!--        十二导联无感电极心电衣（二代）-->
+        <div id="edxdy" class="content-item xdy2" style="margin-top: 70px">
+            <p class="title">十二导联无感电极心电衣（二代）</p>
+            <div class="xdy2-content" style="margin-top: 36px">
+                <div class="xdy2-content-left" data-type="ld">
+
+                    <div style="border: 1px solid #E9E9E9;" class="info-td-item-content layui-carousel" id="lunboid_ld">
+                        <div carousel-item>
+                            <div>
+                                <div class="info-td-item-content-item">
+                                    <video controls width="670" height="375" loop autoplay src="image/mp4-1.mp4"></video>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="info-td-item-content-item">
+                                    <video controls width="670" height="375" loop autoplay src="image/mp4-1.mp4"></video>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="info-td-item-content-item">
+                                    <img src="image/xdy2-l-3.svg"/>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="info-td-item-content-item">
+                                    <img src="image/xdy2-l-4.svg"/>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="info-td-item-content-item">
+                                    <div class="info-td-circ">
+                                        <div class="info-td-round">
+                                            <img class="ren-bg" src="image/renbg.svg"/>
+                                            <img class="ren" src="image/ren.svg"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-td-item-content-info">
+                                        <p class="info-td-name">徐潇4</p>
+                                        <p class="info-td-title">创始人 首席执行官</p>
+                                        <p class="info-td-desc">
+                                            这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="info-td-item-content-item">
+                                    <div class="info-td-circ">
+                                        <div class="info-td-round">
+                                            <img class="ren-bg" src="image/renbg.svg"/>
+                                            <img class="ren" src="image/ren.svg"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-td-item-content-info">
+                                        <p class="info-td-name">徐潇5</p>
+                                        <p class="info-td-title">创始人 首席执行官</p>
+                                        <p class="info-td-desc">
+                                            这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="info-td-item-content-item">
+                                    <div class="info-td-circ">
+                                        <div class="info-td-round">
+                                            <img class="ren-bg" src="image/renbg.svg"/>
+                                            <img class="ren" src="image/ren.svg"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-td-item-content-info">
+                                        <p class="info-td-name">徐潇6</p>
+                                        <p class="info-td-title">创始人 首席执行官</p>
+                                        <p class="info-td-desc">
+                                            这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="info-td-item-content-item">
+                                    <div class="info-td-circ">
+                                        <div class="info-td-round">
+                                            <img class="ren-bg" src="image/renbg.svg"/>
+                                            <img class="ren" src="image/ren.svg"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-td-item-content-info">
+                                        <p class="info-td-name">徐潇7</p>
+                                        <p class="info-td-title">创始人 首席执行官</p>
+                                        <p class="info-td-desc">
+                                            这是一段创始人介绍文案，成立于2015年，于2019年获得高新技术企业认证，编号：GR201931000542。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div style="left: 8%;margin-top: 22px" class="info-jieshao-sub layui-carousel" id="lunboidsub_ld">
+                        <p class="prev"
+                           style="width: 25px;height: 25px;position: absolute;top: 46px;left: -40px;cursor: pointer;background-image: url('image/left.svg')"></p>
+                        <p class="next"
+                           style="width: 25px;height: 25px;position: absolute;top: 46px;right: -40px;cursor: pointer;background-image: url('image/right.svg')"></p>
+                        <div carousel-item>
+                            <div>
+                                <div class="info-jieshao-sub-item">
+                                    <p>
+                                            <span class="sub-active" data-index="0">
+                                                <img src="image/xdy2-l-1.svg"/>
+                                            </span>
+                                    </p>
+                                    <p>
+                                            <span data-index="1">
+                                                <img src="image/xdy2-l-2.svg"/>
+                                            </span>
+                                    </p>
+                                    <p>
+                                            <span data-index="2">
+                                                <img src="image/xdy2-l-3.svg"/>
+                                            </span>
+                                    </p>
+                                    <p>
+                                            <span data-index="3">
+                                                <img src="image/xdy2-l-4.svg"/>
+                                            </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info-jieshao-sub-item">
+                                    <p>
+                                            <span class="sub-active" data-index="5">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                    </p>
+                                    <p>
+                                            <span data-index="6">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                    </p>
+                                    <p>
+                                            <span data-index="7">
+                                                <img src="image/ren.svg"/>
+                                            </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="xdy2-content-right">
+                    <p class="right-title">心电衣使用场景</p>
+                    <p class="right-content">
+                        [术后康复] 手术后监测恢复状态：精神压力大、24小时监测、心脏风险筛查<br>
+                        [风险预警] 受基础疾病困扰人群：高血糖、高血压、高血脂、心梗中风<br>
+                        [长时监护] 阳康后持续身体不适：胸口疼、呼吸困难、心肌炎风险、胸闷</p>
+                </div>
+            </div>
+        </div>
+
+        <!--        灵心APP-->
+        <div id="lxapp" class="content-item lx-app">
+            <div style="position: absolute;top: 0px;left: 0">
+                <p class="title-icon">
+                    <img src="image/diandian.svg"/>
+                </p>
+                <p class="info-jieshao-title" style="margin-top: 47px">
+                    灵心APP
+                </p>
+                <p class="lx-app-item" style="margin-top: 20px">
+                    <span>
+                        <img src="image/xin.svg"/>
+                    </span>
+                    <span>阳康后持续身体不适<br> 灵心APP为您提供长时监护</span>
+                </p>
+
+                <p class="lx-app-item">
+                    <span>
+                        <img src="image/xin.svg"/>
+                    </span>
+                    <span>基础病让你备受困扰<br> 灵心APP帮您判断风险预警</span>
+                </p>
+
+                <p class="lx-app-item">
+                    <span>
+                        <img src="image/xin.svg"/>
+                    </span>
+                    <span>手术后监测恢复状态<br> 灵心APP陪您术后恢复健康</span>
+                </p>
+            </div>
+            <img style="margin-right: -20px" class="lx-app-bg" src="image/pd-lx-bg.svg"/>
+        </div>
+
+        <!--        心脏爱运动app 医生-->
+        <div id="xzaydapp" class="content-item xdy1" style="margin-top: 130px">
+            <div class="xdy1-left" style="width: 666px">
+                <p class="title-icon" style="margin-top: 33px">
+                    <img src="image/diandian.svg"/>
+                </p>
+                <p class="info-jieshao-title" style="margin-top: 5px">
+                    心脏爱运动app
+                </p>
+
+                <p class="xzayd-title" style="margin-top: 56px">
+                    医生端
+                </p>
+
+                <p class="xdy1-desc" style="margin-top: 35px">
+                    有关心脏爱医生端的介绍，软件操作方便，功能多样，让医生更快捷方便的检测患者的各种数据，提供包括心脏负荷监测、心律失常监测、血压监测等多种功能。
+                </p>
+            </div>
+            <div class="xdy1-right" style="width: 377px">
+                <img src="image/xzaydapp.svg"/>
+            </div>
+        </div>
+        <div class="content-item xdy1-img" style="margin-top: 30px">
+            <img src="image/xzayd-1.svg"/>
+            <img src="image/xzayd-2.svg"/>
+            <img src="image/xzayd-3.svg"/>
+            <img src="image/xzayd-4.svg"/>
+            <img src="image/xzayd-5.svg"/>
+        </div>
+
+        <!--        心脏爱运动app 患者-->
+        <div class="content-item xzayd" style="margin-top: 130px">
+            <div style="width:440px;position: absolute;top: 80px;left: 0">
+                <p class="xzayd-title">
+                    患者端
+                </p>
+                <p class="xzayd-desc" style="margin-top: 56px">
+                    有关心脏爱运动患者端的介绍，软件操作方便，功能多样，提供包括心脏负荷监测、心律失常监测、血压监测等多种功能。
+                </p>
+            </div>
+            <img class="lx-app-bg" src="image/xzayd.svg"/>
+        </div>
+
+        <!--        脉迩生活app-->
+        <div id="meshapp" class="content-item mesh" style="margin-top: 120px">
+            <div class="mesh-left">
+                <p class="mesh-title" style="margin-top: 28px">
+                    <img src="image/logo-s.svg"/>
+                    <span>脉迩生活app</span>
+                </p>
+                <p class="mesh-desc" style="margin-top: 35px">
+                    脉你生活是一款专业的健康管理软件，软件操作方便，功能多样，提供包括心脏负荷监测、心律失常监测、血压监测等多种功能。
+                </p>
+                <p class="mesh-desc">
+                    我们的私人医生和健康教练团队将会为用户提供健康管理计划，带给用户全方位立体式的专业慢病管理和健康管理。使用户足不出户便能获得自己的私人医生咨询，了解自己的身体状况，改善生活习惯，追踪监控包括心血管疾病、高血压等多种危害健康的危险疾病的状况。
+                </p>
+            </div>
+            <div class="mesh-right">
+                <img src="image/mesh.svg"/>
+            </div>
+        </div>
+        <div class="content-item xdy1-img" style="margin-top: 80px">
+            <img src="image/mesh-1.svg"/>
+            <img src="image/mesh-2.svg"/>
+            <img src="image/mesh-3.svg"/>
+            <img src="image/mesh-4.svg"/>
+            <img src="image/mesh-5.svg"/>
+        </div>
+
+
+        <!--        <div class="content-item xdy1-img" style="margin-top: 55px">-->
+        <!--            <img src="image/xdy1-1.svg"/>-->
+        <!--            <img src="image/xdy1-2.svg"/>-->
+        <!--            <img src="image/xdy1-3.svg"/>-->
+        <!--            <img src="image/xdy1-4.svg"/>-->
+        <!--            <img src="image/xdy1-5.svg"/>-->
+        <!--        </div>-->
+
+        <!--        无线心电监测仪-->
+        <div id="wxxdjcy" class="content-item wxxdjcy">
+            <div class="wxxdjcy-title">
+                无线心电监测仪
+            </div>
+            <div class="wxxdjcy-body" style="margin-top: 33px">
+                <div>
+                    <p>产品图</p>
+                    <div>
+                        <span></span>
+                        <span class="img">
+                        <img src="image/dandao1.svg"/>
+                    </span>
+                        <span style="text-align: center"></span>
+                    </div>
+                </div>
+                <div>
+                    <p>使用方法</p>
+
+                    <div>
+                        <span>第一步：</span>
+                        <span class="img">
+                        <img src="image/dandao2.svg"/>
+                    </span>
+                        <span style="text-align: center">双手按压启动测量</span>
+                    </div>
+                </div>
+                <div>
+                    <p></p>
+
+                    <div>
+                        <span>第二步：</span>
+                        <span class="img">
+                        <img src="image/dandao3.svg"/>
+                    </span>
+                        <span style="text-align: center">按示意图进行操作</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="ydccu" class="content-item ydccu" style="margin-top: 70px;margin-bottom: 117px">
+
+
+            <p class="title-icon">
+                <img src="image/diandian.svg"/>
+            </p>
+            <p class="info-jieshao-title" style="margin-top: 13px">
+                移动CCU
+            </p>
+
+            <div class="ccu-body" style="margin-top: 50px">
+                <div class="ccu-body-left">
+                    <div>
+                        <div><img src="image/ccu-1.svg"/></div>
+                    </div>
+                    <div>
+                        <div><img src="image/ccu-2.svg"/></div>
+                    </div>
+                </div>
+                <div class="ccu-body-right">
+                    <div><img src="image/ccu-3.svg"/></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="font-content" style="font-size: 18px;">
+            <div class="font-content-left">
+                <p class="font-content-left-top">
+                    Copyright © 2020 Company Name - Design: 移视科技 - Collect from 移视科技
+                </p>
+                <p>上海移视网络科技有限公司 </p>
+                <p>备案号：沪ICP备18036487号-3</p>
+            </div>
+            <div class="">
+                <p>商务合作</p>
+                <p class="font-mail">邮箱：yishi@mvtech.cc</p>
+                <p>联系人：高梓桓</p>
+                <p>手机号：13795384843</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.7.0.min.js"><\/script>')</script>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+    var scrollList = [
+        {
+            id: "about"
+        },
+        {
+            id: "fun-facts"
+        },
+        {
+            id: "info"
+        },
+        {
+            id: "portfolio"
+        },
+        {
+            id: "contact"
+        },
+    ]
+    $(document).ready(function () {
+        // navigation click actions
+        // $('.scroll-link').on('click', function (event) {
+        //     event.preventDefault();
+        //     var sectionID = $(this).attr("data-id");
+        //     scrollToID('#' + sectionID, 750);
+        // });
+        // scroll to top action
+        $('.scroll-top').on('click', function (event) {
+            event.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+
+        $('.news-click').on('click', function () {
+            var id = $(this).attr('data-id') || '1'
+            window.location.href = 'new-details.html?id=' + id
+        })
+
+        $(".service-item").on('click', function () {
+            alert('请先付费，付费后点击跳转查看详情！')
+        })
+
+
+        for (var i = 0; i < scrollList.length; i++) {
+            $("#" + scrollList[i].id).addClass('animation')
+        }
+        $(document).scroll(function (e) {
+            var height = $(window).height()
+            var top = $(document).scrollTop() + height
+            for (var i = 0; i < scrollList.length; i++) {
+                var dom = $("#" + scrollList[i].id)
+                var domHeight = dom.height()
+                var domTop = dom.offset().top + (domHeight)
+                if (top > domTop) {
+                    $("#" + scrollList[i].id).removeClass('animation')
+                }
+            }
+        })
+    });
+
+
+    function getQueryString(name) {
+        var result = window.location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
+        if (result == null || result.length < 1) {
+            return "";
+        }
+        return result[1];
+    }
+
+
+    // scroll function
+    function scrollToID(id, speed) {
+        var offSet = 50;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({ scrollTop: targetOffset }, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+
+    if (typeof console === "undefined") {
+        console = {
+            log: function () {
+            }
+        };
+    }
+
+    var scrollId = getQueryString('id') || null
+    if (scrollId != null) {
+        scrollToID('#' + scrollId, 750);
+
+    }
+
+    layui.use('dropdown', function () {
+        var dropdown = layui.dropdown
+        dropdown.render({
+            elem: '#user',
+            data: [{
+                title: '退出登录'
+                , id: 100
+                , href: '#'
+            }]
+            , id: 'demo1'
+            //菜单被点击的事件
+            , click: function (obj) {
+                if (obj.id == 100) {
+                    localStorage.removeItem('username')
+                    location.href = "login.html"
+                }
+            }
+        });
+    });
+
+    if (localStorage.getItem('username')) {
+        $('.username').show()
+        $("#username").text(localStorage.getItem('username'))
+        $('.goSign').hide()
+    } else {
+        $('.username').hide()
+        $('.goSign').show()
+    }
+
+
+    const lunbo = {
+        ld: {
+            ins: null,
+            ins1: null,
+            insIndex: 0,
+            ins1Current: 0
+        },
+    }
+    layui.use('carousel', function () {
+        var carousel = layui.carousel;
+        //建造实例
+
+        for (const item in lunbo) {
+            lunbo[item].ins = carousel.render({
+                elem: '#lunboid_' + item
+                , width: '100%' //设置容器宽度
+                , height: '375px' //设置容器宽度
+                , arrow: 'none' //始终显示箭头
+                , autoplay: false
+                , indicator: 'none'
+                //,anim: 'updown' //切换动画方式
+            });
+
+            lunbo[item].ins1 = carousel.render({
+                elem: '#lunboidsub_' + item
+                , width: '84%' //设置容器宽度
+                , height: '132px' //设置容器宽度
+                , arrow: 'none' //始终显示箭头
+                , autoplay: false
+                , indicator: 'none'
+                //,anim: 'updown' //切换动画方式
+            });
+        }
+
+        console.log(lunbo.ld.ins)
+    });
+
+
+    let debouncingTime = 0
+
+    function debouncingFun() {
+        let flag = false
+        if (new Date().getTime() - debouncingTime > 500) {
+            flag = true
+            debouncingTime = new Date().getTime()
+        }
+        return flag
+    }
+
+    $('.info-jieshao-sub-item span').click(function () {
+
+        if (!debouncingFun()) {
+            return
+        }
+
+        const index = $(this).attr('data-index')
+        const type = $(this).parents('.xdy2-content-left').attr('data-type')
+        let direction = 'sub'
+        let step = 0
+        if (index > lunbo[type].insIndex) {
+            direction = 'add'
+            step = index - lunbo[type].insIndex
+            lunbo[type].insIndex = parseInt(index)
+            slideAll($(this), type, index, direction, step)
+        }
+
+        if (index < lunbo[type].insIndex) {
+            direction = 'sub'
+            step = lunbo[type].insIndex - index
+            lunbo[type].insIndex = parseInt(index)
+            slideAll($(this), type, index, direction, step)
+        }
+    })
+
+    $('.prev').click(function () {
+        if (!debouncingFun()) {
+            return
+        }
+        const type = $(this).parents('.info-td-item').attr('data-type')
+        let index = lunbo[type].insIndex - 1
+        const length = $('[data-type=' + type + '] .info-jieshao-sub-item span').length
+
+        if (index < 0) {
+            index = length - 1
+        }
+        if (index >= length) {
+            index = 0
+        }
+
+        lunbo[type].insIndex = parseInt(index)
+
+        slideAll($(this), type, lunbo[type].insIndex, 'sub', 1)
+    })
+
+    $('.next').click(function () {
+        if (!debouncingFun()) {
+            return
+        }
+        const type = $(this).parents('.info-td-item').attr('data-type')
+        let index = lunbo[type].insIndex + 1
+        const length = $('[data-type=' + type + '] .info-jieshao-sub-item span').length
+
+        console.log(index)
+
+        if (index < 0) {
+            index = length - 1
+        }
+        if (index >= length) {
+            index = 0
+        }
+
+        lunbo[type].insIndex = parseInt(index)
+
+
+        slideAll($(this), type, lunbo[type].insIndex, 'add', 1)
+    })
+
+    function slideAll(elm, type, index, direction, step) {
+
+        lunbo[type].ins.slide(direction, step)
+        const ins1index = Math.floor(index / 5)
+        if (lunbo[type].ins1Current !== ins1index) {
+            lunbo[type].ins1Current = ins1index
+            lunbo[type].ins1.slide(ins1index)
+        }
+        $('[data-type=' + type + '] .sub-active').removeClass('sub-active')
+        $('[data-type=' + type + '] [data-index=' + index + ']').addClass('sub-active')
+    }
+
+
+</script>
+</body>
+</html>

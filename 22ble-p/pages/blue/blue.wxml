@@ -1,0 +1,32 @@
+<!--pages/blue/blue.wxml-->
+<view>
+
+  <view style="position: absolute;width: 100%;height: 100%;top: 0;left: 0;">
+    <button bind:tap="handleOpenBlue">
+      搜索设备
+    </button>
+
+    <view>
+      <view wx:for="{{devicesList}}" bind:tap="handleClickDevice" data-id="{{item.deviceId}}">
+        {{item.name}}
+      </view>
+    </view>
+
+
+    <button bind:tap="handleGetInfo">
+      获取电池，监护状态，监护时间
+    </button>
+
+    <button bind:tap="handleGetHeartData">
+      获取心电数据
+    </button>
+
+  </view>
+
+  <canvas type="2d" id="latticeCanvas" style="width:100vw;height:100vh;pointer-events: none;position: absolute;top: 0;left: 0;"></canvas>
+
+  <canvas type="2d" id="myCanvas" style="width:100vw;height:100vh;pointer-events: none;"></canvas>
+
+
+
+</view>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="console">
+
+</div>
+</body>
+</html>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+    pathname = location.pathname.split('/')[1] || ''
+    // https://xindianyi.mvheartcare.net/web/shortUrl
+    axios.get('http://192.168.10.94:8083/web/shortUrl', {
+        headers: {
+            Authorization: 'test'
+        },
+        params: {
+            signId: pathname
+        }
+    })
+        .then(function (response) {
+            const data = response.data?.data || {}
+            const uuid = data.uuid
+            const startTime = data.startTime
+            const endTime = data.endTime
+
+            const href = `https://xindianyi.mvheartcare.net/clothesh5/week/${uuid}/${startTime}/${endTime}`
+            console.log(href)
+            location.href = href
+        })
+        .catch(function (error) {
+            document.getElementById('console').innerHTML = '网络错误，请刷新试试'
+        });
+</script>

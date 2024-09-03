@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>移视科技-注册页面</title>
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/common.css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+</head>
+<body>
+<a href="https://xyt.xcc.cn/getpcInfo?sn=1734123503512125440&language=CN&certType=8&url=*.mvheartcare.net" target="_blank" style="position: relative;display: inline-block;height: 38px;">
+  <div style="width:100%;height:100%;position: absolute;top: 0;left: 0;"></div><embed src="https://program.xinchacha.com/web/1734123503512125440=*.mvheartcare.net.svg"width="103" height="38" type="image/svg+xml" pluginspage="//www.adobe.com/svg/viewer/install/"/></a>
+<div class="wrap login_wrap">
+  <div class="content">
+    
+    <div class="logo"></div>
+    
+    <div class="login_box">
+      
+      <div class="login_form">
+        <div class="login_title">
+          注册
+        </div>
+        <form action="#" method="post">
+          
+          <div class="form_text_ipt">
+            <input name="username" id="username" type="text" placeholder="用户名">
+          </div>
+          <div class="ececk_warning" id="username-war"><span>用户名不能为空</span></div>
+          <div class="form_text_ipt">
+            <input name="password" id="password" type="password" placeholder="密码">
+          </div>
+          <div class="ececk_warning" id="password-war"><span>密码不能为空</span></div>
+          <div class="form_text_ipt">
+            <input name="repassword" id="password1" type="password" placeholder="重复密码">
+          </div>
+          <div class="ececk_warning" id="password1-war"><span>重复密码不一致</span></div>
+          
+          <div class="form_btn">
+            <button type="button" onclick="register()">注册</button>
+          </div>
+          <div class="form_reg_btn">
+            <span>已有帐号？</span><a href="login.html">马上登录</a>
+          </div>
+        </form>
+        <div class="other_login">
+          <!--							<div class="left other_left">-->
+          <!--								<span>其它登录方式</span>-->
+          <!--							</div>-->
+          <!--							<div class="right other_right">-->
+          <!--								<a href="#"><i class="fa fa-qq fa-2x"></i></a>-->
+          <!--								<a href="#"><i class="fa fa-weixin fa-2x"></i></a>-->
+          <!--								<a href="#"><i class="fa fa-weibo fa-2x"></i></a>-->
+          <!--							</div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<div style="text-align:center;">
+  <script type="text/javascript">
+    function register() {
+      var username = $('#username').val().trim()
+      var password = $('#password').val().trim()
+      var password1 = $('#password1').val().trim()
+      var verif = true
+      if (username === "") {
+        verif = false
+        $("#username-war").show()
+      } else {
+        $("#username-war").hide()
+
+      }
+      if (password === "") {
+        verif = false
+        $("#password-war").show()
+      } else {
+        $("#password-war").hide()
+
+      }
+      if (password1 !== password) {
+        verif = false
+        $("#password1-war").show()
+      } else {
+        $("#password1-war").hide()
+      }
+
+      if (verif) {
+        location.href = "index.html"
+        localStorage.setItem('username', username)
+      }
+    }
+  </script>
+</div>
+</body>
+</html>

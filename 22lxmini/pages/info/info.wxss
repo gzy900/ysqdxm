@@ -1,0 +1,109 @@
+/* pages/info/info.wxss */
+
+.group {
+  width: 100%;
+  background-color: #ffffff;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px 18px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+  margin-bottom: 10px;
+}
+
+.info-item {
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  display: flex;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.info-item:last-child {
+  border-bottom: 1px solid transparent;
+}
+
+.info-item .item-label {
+  flex: none;
+  font-size: 16px;
+  /* font-weight: bold; */
+}
+
+.info-item .item-input {
+  height: 100%;
+  line-height: 46px;
+  flex: auto;
+  text-align: right;
+  color: #666;
+  padding: 0 8px;
+}
+
+.info-item text {
+  color: #666;
+}
+
+.info-item-shu {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item-shu .item-label {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  margin: 12px 0;
+}
+
+.info-item-shu .item-input {
+  width: 100%;
+  height: auto;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item-shu picker view {
+  padding: 0 8px;
+}
+
+.picker-content {
+  display: flex;
+}
+
+.picker-content text:first-child {
+  flex: auto;
+}
+
+.info-item-area {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  flex: auto;
+  box-sizing: border-box;
+}
+
+.info-btn {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  padding: 0 28rpx;
+  left: 0;
+  z-index: 2;
+}
+
+.info-btn button {
+  width: 100%;
+  height: 50px;
+  background-color: #4D73EC;
+  line-height: 50px;
+  padding: 0;
+  color: #ffffff;
+  border-radius: 33px;
+}

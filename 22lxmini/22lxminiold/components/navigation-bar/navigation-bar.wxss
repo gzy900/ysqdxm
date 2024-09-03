@@ -1,0 +1,39 @@
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  color: #fff;
+  z-index: 9;
+  /* background: #000; */
+}
+
+.nav-bar .nav-bar-body {
+  width: 60%;
+  color: #333;
+  font-size: 14px;
+  position: absolute;
+  /* border-radius: 50px; */
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+}
+
+.nav-bar .nav-retrun {
+  flex: none;
+}
+
+
+.nav-bar .nav-title {
+  flex: auto;
+  text-align: center;
+}
+
+.nav-bar .search {
+  width: 60%;
+  color: #333;
+  font-size: 14px;
+  background: #fff;
+  position: absolute;
+  border-radius: 50px;
+  background: #ddd;
+}

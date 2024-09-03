@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>年会抽奖</title>
+    <meta charset="utf-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+</head>
+
+<body>
+<script src="./lib/three.min.js"></script>
+<script src="./lib/tween.min.js"></script>
+<script src="./lib/TrackballControls.js"></script>
+<script src="./lib/CSS3DRenderer.js"></script>
+<script src="./lib/ajax.js"></script>
+
+<div class="logo-bg">
+
+</div>
+<div class="canvas-box">
+    <canvas id="canvas">你的浏览器不支持canvas</canvas>
+</div>
+
+<div class="music">
+    <audio id="music" src="./data/music.mp3" class="music-item" loop></audio>
+    <div id="musicBox" class="music-box" title="播放/暂停背景音乐">Music</div>
+</div>
+
+<div id="prizeBar"></div>
+
+
+<div id="container"></div>
+
+<div id="menu">
+    <button id="enter">进入抽奖</button>
+    <div id="lotteryBar" class="none">
+        <button id="lottery">开始抽奖</button>
+        <button id="reLottery">重新抽奖</button>
+        <div class="fixed-bar">
+            <button id="save" class="fixed-btn">导出抽奖结果</button>
+            <button id="reset" class="fixed-btn">重置</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="main">
+
+    <div class="center-ani">
+        <p id="xuxiao">
+            <img src="img/x_6.png"/>
+        </p>
+    </div>
+
+
+    <div class="cube" id="cube">
+        <div class="plane plane1">
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/gzy1.jpg')"></p>
+                    <p style="background-image: url('img/gzy2.jpg')"></p>
+                    <p style="background-image: url('img/gzy2.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/dyc1.png')"></p>
+                    <p style="background-image: url('img/dyc2.jpg')"></p>
+                    <p style="background-image: url('img/dyc3.jpg')"></p>
+                    <p style="background-image: url('img/dyc4.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/hz1.jpg')"></p>
+                    <p style="background-image: url('img/hz2.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/hz7.jpg')"></p>
+                    <p style="background-image: url('img/hz8.jpg')"></p>
+
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p class="x_3"></p>
+                    <p class="x_2"></p>
+
+                    <p class="x_4"></p>
+                    <p class="x_1"></p>
+                    <p class="x_0"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/sy1.jpg')"></p>
+                    <p style="background-image: url('img/sy1.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/xj1.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <!--                    <p style="background-image: url('img/.jpg')"></p>-->
+
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/hz13.jpg')"></p>
+                    <p style="background-image: url('img/hz14.jpg')"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="plane plane2">
+            <div class="cube-item">
+                <div class="cube-img-body">
+
+                    <p style="background-image: url('img/p_0.jpg')"></p>
+                    <p style="background-image: url('img/p_1.jpg')"></p>
+                    <p style="background-image: url('img/p_2.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+
+                    <p style="background-image: url('img/w_0.jpeg')"></p>
+                    <p style="background-image: url('img/w_1.png')"></p>
+                    <p style="background-image: url('img/w_2.png')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/sqw1.jpg')"></p>
+                    <p style="background-image: url('img/sqw2.jpg')"></p>
+                    <p style="background-image: url('img/sqw3.jpg')"></p>
+                    <p style="background-image: url('img/sqw4.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/qzy1.jpg')"></p>
+                    <p style="background-image: url('img/qzy2.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/q_0.jpg')"></p>
+                    <p style="background-image: url('img/q_1.jpg')"></p>
+
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/wwd1.jpg')"></p>
+                    <p style="background-image: url('img/wwd2.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/hb1.jpg')"></p>
+                    <p style="background-image: url('img/hb2.jpg')"></p>
+                    <p style="background-image: url('img/hb3.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/wwh1.jpg')"></p>
+                    <p style="background-image: url('img/wwh2.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/mj1.jpg')"></p>
+                    <p style="background-image: url('img/mj2.jpg')"></p>
+                    <p style="background-image: url('img/mj3.jpg')"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="plane plane3">
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/gfm.jpg')"></p>
+                    <p style="background-image: url('img/gfm1.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/ly1.jpg')"></p>
+                    <p style="background-image: url('img/ly2.jpg')"></p>
+
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/zkd1.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/lpf.jpg')"></p>
+                    <p style="background-image: url('img/lpf1.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/cjy1.jpg')"></p>
+                    <p style="background-image: url('img/cjy2.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/cc1.png')"></p>
+                    <p style="background-image: url('img/cc2.jpg')"></p>
+
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/qls1.jpg')"></p>
+                    <p style="background-image: url('img/qls2.jpg')"></p>
+
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/dyj0.jpg')"></p>
+                    <p style="background-image: url('img/dyj1.jpg')"></p>
+                    <p style="background-image: url('img/dyj2.jpg')"></p>
+                    <p style="background-image: url('img/dyj3.jpg')"></p>
+                    <p style="background-image: url('img/dyj4.jpg')"></p>
+                    <p style="background-image: url('img/dyj5.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                </div>
+            </div>
+        </div>
+
+        <div class="plane plane4">
+            <div class="cube-item">
+                <div class="cube-img-body">
+
+                    <p style="background-image: url('img/wj1.jpg')"></p>
+                    <p style="background-image: url('img/wj2.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/zj1.jpg')"></p>
+                    <p style="background-image: url('img/zj2.jpg')"></p>
+                    <p style="background-image: url('img/zj3.jpg')"></p>
+                    <p style="background-image: url('img/zj4.jpg')"></p>
+                    <p style="background-image: url('img/zj5.jpg')"></p>
+                    <p style="background-image: url('img/zj6.jpg')"></p>
+                    <p style="background-image: url('img/zj7.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+
+                    <p style="background-image: url('img/zj8.jpg')"></p>
+                    <p style="background-image: url('img/zj9.jpg')"></p>
+                    <p style="background-image: url('img/zj10.jpg')"></p>
+                    <p style="background-image: url('img/zj11.jpg')"></p>
+                    <p style="background-image: url('img/zj12.jpg')"></p>
+                    <p style="background-image: url('img/zj13.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+
+                    <p style="background-image: url('img/hz3.jpg')"></p>
+                    <p style="background-image: url('img/hz4.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+
+                    <p style="background-image: url('img/hz5.jpg')"></p>
+                    <p style="background-image: url('img/hz6.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+
+                    <p style="background-image: url('img/hz9.jpg')"></p>
+                    <p style="background-image: url('img/hz10.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+
+                    <p style="background-image: url('img/hz11.jpg')"></p>
+                    <p style="background-image: url('img/hz12.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+
+                    <p style="background-image: url('img/hz15.jpg')"></p>
+                    <p style="background-image: url('img/hz16.jpg')"></p>
+                </div>
+            </div>
+            <div class="cube-item">
+                <div class="cube-img-body">
+                    <p style="background-image: url('img/hz17.jpg')"></p>
+                    <p style="background-image: url('img/hz18.jpg')"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+<style>
+    /** {*/
+    /*    margin: 0;*/
+    /*    padding: 0;*/
+    /*    box-sizing: border-box;*/
+    /*}*/
+
+    /*html, body {*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*}*/
+
+    /*body {*/
+    /*}*/
+
+
+    #start {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        display: none;
+    }
+
+    #start p {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform .15s;
+        transform: translate3d(0, 0, 0);
+
+        background-size: contain;
+        background-position: center center;
+        z-index: 100000000;
+    }
+
+    .x_0 {
+        background-image: url("img/x_0.jpg");
+    }
+
+    .x_1 {
+        background-image: url("img/x_1.jpg");
+    }
+
+    .x_2 {
+        background-image: url("img/x_2.jpg");
+    }
+
+    .x_3 {
+        background-image: url("img/x_3.jpg");
+    }
+
+    .x_4 {
+        background-image: url("img/x_4.jpg");
+    }
+
+
+    .main {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+
+        z-index: 999;
+
+
+        /*perspective: 2000px;*/
+        /*transform-style: preserve-3d;*/
+    }
+
+    .main p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main * {
+        box-sizing: border-box;
+    }
+
+    .cube {
+        width: 720px;
+        height: 720px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: 50% 50% -360px;
+        transform: translate3d(-50%, -50%, 0) scale(5);
+        perspective: 2000px;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        /*display: none;*/
+        /*animation: cubeRun 5s infinite linear;*/
+
+    }
+
+    @keyframes cubeRun {
+        0% {
+            transform: rotateY(0deg);
+        }
+        100% {
+            transform: rotateY(360deg);
+        }
+    }
+
+    .plane {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        transform-origin: 50% 50% -360px;
+    }
+
+    .plane1 {
+        transform: rotateY(0deg);
+    }
+
+    .plane2 {
+        transform: rotateY(90deg);
+
+    }
+
+    .plane3 {
+        transform: rotateY(180deg);
+
+    }
+
+    .plane4 {
+        transform: rotateY(270deg);
+    }
+
+
+    .start-animation .plane1 {
+        animation: planeRun1 20s infinite linear;
+    }
+
+    .start-animation .plane2 {
+        animation: planeRun2 20s infinite linear;
+    }
+
+    .start-animation .plane3 {
+        animation: planeRun3 20s infinite linear;
+    }
+
+    .start-animation .plane4 {
+        animation: planeRun4 20s infinite linear;
+    }
+
+    .cube-item {
+        width: 240px;
+        height: 240px;
+        flex: auto;
+        padding: 10px;
+    }
+
+    .cube-item .cube-img-body {
+        /*border: 1px dashed steelblue;*/
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .cube-img-body p {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform .15s;
+        transform: translate3d(0, 0, 0);
+
+        background-size: contain;
+        background-position: center center;
+        z-index: 100000000;
+    }
+
+    @keyframes planeRun1 {
+        0% {
+            transform: rotateY(0deg);
+        }
+        100% {
+            transform: rotateY(360deg);
+        }
+    }
+
+    @keyframes planeRun2 {
+        0% {
+            transform: rotateY(90deg);
+        }
+        100% {
+            transform: rotateY(450deg);
+        }
+    }
+
+    @keyframes planeRun3 {
+        0% {
+            transform: rotateY(180deg);
+        }
+        100% {
+            transform: rotateY(540deg);
+        }
+    }
+
+    @keyframes planeRun4 {
+        0% {
+            transform: rotateY(270deg);
+        }
+        100% {
+            transform: rotateY(630deg);
+        }
+    }
+
+    .center-ani {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #xuxiao {
+        width: auto;
+        height: 80%;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        overflow: hidden;
+        transform: translateY(-100%) translateX(-50%);
+
+        /*animation: xuxiao-run 10s 1;*/
+    }
+
+    /*@keyframes xuxiao-run {*/
+    /*    0% {*/
+    /*        transform: translateY(0) translateX(0);*/
+    /*    }*/
+    /*    100% {*/
+
+    /*    }*/
+    /*}*/
+
+    #xuxiao img {
+        width: auto;
+        height: 100%;
+        float: left;
+    }
+
+</style>
+<script type="text/javascript">
+
+    const cube = document.getElementById('cube')
+
+    function xuxiao() {
+        const dw = document.body.clientWidth
+        const dh = document.body.clientHeight
+
+        const xx = document.getElementById('xuxiao')
+        const xw = xx.clientWidth
+        const xh = xx.clientHeight
+
+        xx.style.left = (dw / 2 - xw / 2) + 'px'
+        xx.style.top = -xh + 'px'
+        xx.style.transform = 'translateY(0) translateX(0)'
+        // transition: transform 1s;
+        //
+        let xuTime = null
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform 1s'
+            xx.style.transform = 'translateY(' + (dh * .9) + 'px) translateX(0) scale(1)'
+
+        }, 0)
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform .3s linear'
+            xx.style.transform = 'translateY(' + (dh * .7) + 'px) translateX(' + (-xw * .8) + 'px) scale(.8)'
+
+        }, 1000)
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform .3s linear'
+            xx.style.transform = 'translateY(' + (dh * .5) + 'px) translateX(' + (0) + 'px) scale(.6)'
+
+        }, 1300)
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform .3s linear'
+            xx.style.transform = 'translateY(' + (dh * .7) + 'px) translateX(' + (xw * .8) + 'px) scale(.8)'
+
+        }, 1600)
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform .3s linear'
+            xx.style.transform = 'translateY(' + (dh * .9) + 'px) translateX(' + (0) + 'px) scale(1)'
+
+        }, 1900)
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform 1.5s linear'
+            xx.style.transform = 'translateY(' + (dh * .9) + 'px) translateX(' + (0) + 'px) scale(1) rotate(' + 360 * 5 + 'deg)'
+
+        }, 2200)
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform 2s linear'
+            xx.style.transform = 'translateY(' + (dh * .9) + 'px) translateX(' + (0) + 'px) scale(1) rotate(' + 360 * 10 + 'deg)'
+
+
+        }, 3700)
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform .7s linear'
+            xx.style.transform = 'translateY(' + (dh * .9) + 'px) translateX(' + (dw) + 'px) scale(1) rotate(' + 360 * 10 + 'deg)'
+
+
+        }, 5700)
+
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform 0s linear'
+            xx.style.transform = 'translateY(' + (dh * .9) + 'px) translateX(' + (-(dw / 2 + xw)) + 'px) scale(.7) rotate(' + 360 * 10 + 'deg)'
+
+
+        }, 6400)
+
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform 3s linear'
+            xx.style.transform = 'translateY(' + (dh * .9) + 'px) translateX(' + (dw) + 'px) scale(.7) rotate(' + 360 * 12 + 'deg)'
+
+
+        }, 6450)
+
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform 0s linear'
+            xx.style.transform = 'translateY(' + (dh * .9) + 'px) translateX(' + (0) + 'px) scale(10) rotate(' + 360 * 12 + 'deg)'
+
+
+        }, 9450)
+
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform 1.5s linear'
+            xx.style.transform = 'translateY(' + (dh * .9) + 'px) translateX(' + (0) + 'px) scale(1) rotate(' + 360 * 12 + 'deg)'
+
+        }, 9500)
+
+        xuTime = setTimeout(() => {
+            xx.style.transition = 'transform .3s linear'
+            xx.style.transform = 'translateY(' + (dh * .9) + 'px) translateX(' + (-(dw / 2 - xw / 2)) + 'px) scale(.6) rotate(' + 360 * 12 + 'deg)'
+            clearTimeout(xuTime)
+            window.initAll()
+        }, 11300)
+    }
+
+    function startXuxiao() {
+        cube.style.display = 'none'
+        xuxiao()
+    }
+
+
+    function start_ani() {
+        const time = setTimeout(() => {
+            cube.style.transition = 'transform 8s cubic-bezier(0.42,0,1,1)'
+            cube.style.transform = 'translate3d(-50%, -50%, 0) scale(1)'
+            clearTimeout(time)
+        }, 0)
+        const time1 = setTimeout(() => {
+            cube.className = 'cube start-animation'
+            clearTimeout(time1)
+        }, 7900)
+        const time2 = setTimeout(() => {
+            startXuxiao()
+            clearTimeout(time2)
+        }, 27900)
+        // transform: translate3d(-50%, -50%, 0) scale(5);
+    }
+
+    function imgLoop() {
+
+        const faList = document.getElementsByClassName('cube-img-body')
+        const domList = []
+        const pl = []
+        for (let i = 0; i < faList.length; i++) {
+            const list = faList[i].getElementsByTagName('p') || []
+            domList.push(list)
+            pl.push(list.length - 1)
+        }
+        let zIndex = 100 * 100 * 100 * 100
+
+        const startTime = setInterval(() => {
+            for (let f = 0; f < domList.length; f++) {
+                const domS = domList[f]
+                if (domS.length <= 0) {
+                    continue
+                }
+                zIndex--
+                domS[pl[f]].style.transform = 'translate3d(0, -100%, 0)'
+                let d1 = pl[f] + 1
+                if (d1 > domS.length - 1) {
+                    d1 = 0
+                }
+                domS[d1].style.transform = 'translate3d(0, 0, 0)'
+                domS[d1].style.zIndex = zIndex + ''
+                pl[f]--
+                if (pl[f] < 0) {
+                    pl[f] = domS.length - 1
+                }
+            }
+            //     console.log(d)
+        }, 1300)
+    }
+
+    cube.addEventListener('click', () => {
+        start_ani()
+        let time = setTimeout(() => {
+            imgLoop()
+        }, 3000)
+    })
+
+
+</script>

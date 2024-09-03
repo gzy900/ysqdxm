@@ -1,0 +1,22 @@
+<!--pages/index1/index.wxml-->
+<view>
+  <view class="devices">
+    <view bindtap="connect" data-id="{{item}}" class="devices_item" wx:for="{{deviceList}}">
+      {{ item.deviceId }}</view>
+  </view>
+  <view class="">
+    <button bindtap="get_battery">
+      获取电池：{{ battery }}
+    </button>
+
+    <button bindtap="get_search">
+      搜索
+    </button>
+    <!-- <button bindtap="get_data_real_time">
+      获取心电数据
+    </button> -->
+  </view>
+  <view>
+    <canvas id="canvas" type="2d" style="border: 1px solid #000;width: 100vw;height: 50vh;"></canvas>
+  </view>
+</view>

@@ -1,0 +1,94 @@
+<!--pages/info/info.wxml-->
+<view class="container" style="height: auto;padding-bottom: 80px;">
+  <navigation-bar model:scrollTop="{{scrollTop}}"></navigation-bar>
+  <image class="bg" mode="widthFix" src="/images/bg.jpg"></image>
+  <view class="body pd-28" style="margin-top: 20px;">
+    <view class="group">
+      <view class="info-item">
+        <view class="item-label">姓名</view>
+        <input bindinput="nameinput" model:value='{{userName}}' class="item-input" />
+        <text>></text>
+      </view>
+
+      <view class="info-item">
+        <view class="item-label">编号</view>
+        <view class="item-input">{{fromData.orderId}}</view>
+      </view>
+
+      <view class="info-item">
+        <view class="item-label">性别</view>
+        <picker class="item-input" bindchange="sexChange" range="{{sexList}}">
+          <view>{{sexList[fromData.sex]||'无'}}</view>
+        </picker>
+        <text>></text>
+      </view>
+
+      <view class="info-item">
+        <view class="item-label">年龄</view>
+        <picker class="item-input" bindchange="ageChange" range="{{ageList}}">
+          <view>{{fromData.age||'无'}}</view>
+        </picker>
+        <text>></text>
+      </view>
+
+      <view class="info-item {{verify.phone?'':'inputerror'}}">
+        <view class="item-label">联系方式</view>
+        <input bindblur="phonebulr" maxlength="11" type="number" model:value='{{phone}}' class="item-input" />
+        <text>></text>
+      </view>
+
+    </view>
+
+    <view class="group">
+      <view class="info-item">
+        <view class="item-label">体重</view>
+        <picker class="item-input" bindchange="weightChange" range="{{weightList}}">
+          <view>{{fromData.weight||'无'}}kg</view>
+        </picker>
+        <text>></text>
+      </view>
+
+      <view class="info-item">
+        <view class="item-label">身高</view>
+        <picker class="item-input" bindchange="heightChange" range="{{heightList}}">
+          <view>{{fromData.height||'无'}}cm</view>
+        </picker>
+        <text>></text>
+      </view>
+
+      <view class="info-item">
+        <view class="item-label">尺码</view>
+        <picker class="item-input" bindchange="sizeChange" range="{{sizeList}}">
+          <view>{{fromData.size||'无'}}</view>
+        </picker>
+        <text>></text>
+      </view>
+    </view>
+
+    <view class="group">
+      <view class="info-item-shu">
+        <view class="item-label">收货地址</view>
+
+        <picker mode="region" class="item-input" bindchange="addressChange">
+          <view class="picker-content">
+            <text>{{fromData.address|| '无'}}</text>
+            <text>></text>
+          </view>
+        </picker>
+      </view>
+
+      <view class="info-item-shu">
+        <view class="item-label">详细地址</view>
+        <textarea model:value="{{area}}" bindblur="regionsinput" bindinput="regionsinput" class="info-item-area" bindblur="bindTextAreaBlur" placeholder="请输入详细地址（街道，门牌号等）" />
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="info-btn">
+  <button bindtap="handleSubmit">确定</button>
+</view>
+
+<view wx:if="{{!verify.phone}}" class="tips" style="top:{{menuheight}}px;">
+  <view class="{{verify.phone?'':'tipsShow'}}" style="transform:translateY({{ verify.phone?'-100%':'0' }})">联系方式错误，请输入11位手机号码</view>
+</view>

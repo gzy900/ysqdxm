@@ -1,0 +1,47 @@
+/* pages/gift/gift.wxss */
+
+.gift-body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 70px 10px;
+}
+
+.gift-body view {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gift-body button {
+  width: 50%;
+  border-radius: 8px;
+  flex: auto;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.gift-body button:first-child {
+  margin-right: 10px;
+}
+
+.gift-body image {
+  width: 100%;
+  border-radius: 8px;
+
+}
+
+.gift-body text{
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  text-align: center;
+  color: #ffffff;
+}

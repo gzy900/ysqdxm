@@ -1,0 +1,53 @@
+{
+  "_from": "vue-ios-datepicker@^1.0.0",
+  "_id": "vue-ios-datepicker@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-PiEV9hTx0zF9bZp1hwG4xRlI+FM=",
+  "_location": "/vue-ios-datepicker",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "vue-ios-datepicker@^1.0.0",
+    "name": "vue-ios-datepicker",
+    "escapedName": "vue-ios-datepicker",
+    "rawSpec": "^1.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.0"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/vue-ios-datepicker/download/vue-ios-datepicker-1.0.0.tgz",
+  "_shasum": "3e2115f614f1d3317d6d9a758701b8c51948f853",
+  "_spec": "vue-ios-datepicker@^1.0.0",
+  "_where": "D:\\Program Files (x86)\\workspace\\medical",
+  "author": {
+    "name": "wanlixin"
+  },
+  "bugs": {
+    "url": "https://github.com/wanlixi/vue-datePicker/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A calendar selector for an imitation Apple phone",
+  "homepage": "https://github.com/wanlixi/vue-datePicker#readme",
+  "keywords": [
+    "vue.js",
+    "iso",
+    "iphone",
+    "datePicker"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "vue-ios-datepicker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wanlixi/vue-datePicker.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

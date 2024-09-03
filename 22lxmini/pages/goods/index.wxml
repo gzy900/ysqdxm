@@ -1,0 +1,87 @@
+<!--pages/goods/index.wxml-->
+<wxs module="filters" src="../../utils/tool.wxs"></wxs>
+<view class="container">
+  <navigation-bar model:scrollTop="{{scrollTop}}"></navigation-bar>
+
+
+  <view class="body pd-28" style="padding: 10px 28rpx;">
+
+
+    <view wx:for="{{taocanList}}" data-goodId="{{item.id}}" bindtap="gopay" class="goods-item">
+      <view class="goods-title">{{item.taocanName}}</view>
+      <view class="goods-content">
+        <view wx:for="{{ taocanList[index].contentList }}" wx:for-index="idx" wx:for-item="itemname" class="goods-service">
+          <view>
+            <view>
+              <text wx:if="{{ idx%2===0 }}" style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+              <text wx:else="" style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+            </view>
+            <view>
+              {{ itemname }}
+              <!-- <view>一年</view> -->
+            </view>
+          </view>
+          <view class="gun"></view>
+        </view>
+      </view>
+      <view class="goods-price">
+        <text>现价：￥{{ filters.toFix(item.originalPrice * discount)}}</text>
+        <!-- <text style="text-decoration: line-through;margin-left: 8px;">￥{{item.originalPrice}}</text> -->
+        <text style="margin: 0 10px;">|</text>
+        <text>每天：￥{{filters.toFix(item.originalPrice * discount/365)}}</text>
+      </view>
+    </view>
+
+    <!-- <view data-goodId="4" bindtap="gopay" class="goods-item">
+      <view class="goods-title">灵心计划（年包）</view>
+      <view class="goods-content">
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+            </view>
+            <view>健康咨询
+              <view>一年</view>
+            </view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+            </view>
+            <view>十二导联心电监测一年</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+            </view>
+            <view>AI智能预防筛查/AI Mode</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+            </view>
+            <view>医生专业报告服务1年
+              <view>Clinical Mode</view>
+            </view>
+          </view>
+          <view class="gun" style="background-color: transparent;"></view>
+        </view>
+      </view>
+      <view class="goods-price">
+        <text>现价：￥8500</text>
+        <text style="text-decoration: line-through;margin-left: 8px;">￥10625</text>
+        <text style="margin: 0 10px;">|</text>
+        <text>每天：￥23</text>
+      </view>
+    </view> -->
+
+  </view>
+</view>

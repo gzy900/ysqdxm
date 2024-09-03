@@ -1,0 +1,4 @@
+<!--pages/pay/index.wxml-->
+<view style="background-color: #ccc;width: 100vw;height: 100vh;padding: 20px;">
+  <view class='jiao'></view>
+</view>

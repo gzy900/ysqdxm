@@ -1,0 +1,199 @@
+<!--pages/goods/index.wxml-->
+<view class="container">
+  <navigation-bar model:scrollTop="{{scrollTop}}"></navigation-bar>
+  <view class="body pd-28" style="padding: 10px 28rpx;">
+    <view data-goodId="1" bindtap="gopay" class="goods-item">
+      <view class="goods-title">灵心一月</view>
+      <view class="goods-content">
+        <view class="goods-service">
+          <view>
+            <view>
+              <text style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+            </view>
+            <view>灵心心脏保护套装</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view>
+              <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+            </view>
+            <view>AI智能预防采集筛查/AI Mode</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+            </view>
+            <view>全场景模式覆盖筛查/Happy Hour Mode</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+            </view>
+            <view>医生专业报告服务1月/Clinical Mode</view>
+          </view>
+          <view class="gun" style="background-color: transparent;"></view>
+        </view>
+      </view>
+      <view class="goods-price">
+        <text>现价：￥3500</text>
+        <!-- <text style="text-decoration: line-through;margin-left: 8px;">￥4500</text> -->
+        <text style="margin: 0 10px;">|</text>
+        <text>每天：￥116.66</text>
+      </view>
+    </view>
+
+
+    <view data-goodId="2" bindtap="gopay" class="goods-item">
+      <view class="goods-title">灵心一季</view>
+      <view class="goods-content">
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+            </view>
+            <view>灵心心脏保护套装</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+            </view>
+            <view>AI智能预防采集筛查/AI Mode</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+            </view>
+            <view>全场景模式覆盖筛查/Happy Hour Mode</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+            </view>
+            <view>医生专业报告服务3月/Clinical Mode</view>
+          </view>
+          <view class="gun" style="background-color: transparent;"></view>
+        </view>
+      </view>
+      <view class="goods-price">
+        <text>现价：￥4500</text>
+        <text style="text-decoration: line-through;margin-left: 8px;">￥5000</text>
+        <text style="margin: 0 10px;">|</text>
+        <text>每天：￥50</text>
+      </view>
+    </view>
+
+    
+
+    <view data-goodId="3" bindtap="gopay" class="goods-item">
+      <view class="goods-title">灵心半载</view>
+      <view class="goods-content">
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+            </view>
+            <view>灵心心脏保护套装</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+            </view>
+            <view>AI智能预防采集筛查/AI Mode</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+            </view>
+            <view>全场景模式覆盖筛查/Happy Hour Mode</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+            </view>
+            <view>医生专业报告服务6月/Clinical Mode</view>
+          </view>
+          <view class="gun" style="background-color: transparent;"></view>
+        </view>
+      </view>
+      <view class="goods-price">
+        <text>现价：￥6500</text>
+        <text style="text-decoration: line-through;margin-left: 8px;">￥7678</text>
+        <text style="margin: 0 10px;">|</text>
+        <text>每天：￥36</text>
+      </view>
+    </view>
+
+
+    <view data-goodId="4" bindtap="gopay" class="goods-item">
+      <view class="goods-title">灵心一年</view>
+      <view class="goods-content">
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+            </view>
+            <view>灵心心脏保护套装</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+            </view>
+            <view>AI智能预防采集筛查/AI Mode</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(2, 225, 172, 1);" class="iconfont icon-fuwu1"></text>
+            </view>
+            <view>全场景模式覆盖筛查/Happy Hour Mode</view>
+          </view>
+          <view class="gun"></view>
+        </view>
+
+        <view class="goods-service">
+          <view>
+            <view> <text style="color: rgba(77, 103, 234, 1)" class="iconfont icon-yifu"></text>
+            </view>
+            <view>医生专业报告服务1年/Clinical Mode</view>
+          </view>
+          <view class="gun" style="background-color: transparent;"></view>
+        </view>
+      </view>
+      <view class="goods-price">
+        <text>现价：￥8500</text>
+        <text style="text-decoration: line-through;margin-left: 8px;">￥10625</text>
+        <text style="margin: 0 10px;">|</text>
+        <text>每天：￥23</text>
+      </view>
+    </view>
+  </view>
+</view>
